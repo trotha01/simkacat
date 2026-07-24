@@ -1,5 +1,5 @@
-import overallsGirl from '../assets/overalls-girl.png'
-import dripDivider1 from '../assets/drip-divider-1.png'
+import overallsGirl from '../assets/overalls-girl.webp'
+import dripDivider1 from '../assets/drip-divider-1.webp'
 import { crew } from '../data/content'
 
 export default function Crew() {
@@ -8,6 +8,9 @@ export default function Crew() {
       <img
         src={dripDivider1}
         alt=""
+        width={1920}
+        height={623}
+        loading="lazy"
         className="pointer-events-none absolute top-[-155px] left-0 z-[1] h-auto w-full"
       />
 
@@ -35,6 +38,9 @@ export default function Crew() {
       <img
         src={overallsGirl}
         alt="Simka Cat girl in printed overalls"
+        width={1920}
+        height={1080}
+        loading="lazy"
         className="pointer-events-none absolute right-[-16%] bottom-[-70px] z-[3] w-[min(62%,640px)] h-auto rotate-2"
       />
     </section>

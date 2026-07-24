@@ -18,17 +18,12 @@ export default {
         nunito: ['Nunito', 'sans-serif'],
       },
       keyframes: {
-        wob: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
         drip: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(6px)' },
         },
       },
       animation: {
-        wob: 'wob 3s ease-in-out infinite',
         drip: 'drip 6s ease-in-out infinite',
         'spin-slow': 'spin 22s linear infinite',
       },

@@ -1,4 +1,4 @@
-import mascot from '../assets/mascot-rocking-horse.png'
+import mascot from '../assets/mascot-rocking-horse.webp'
 
 export default function Backstory() {
   return (
@@ -67,6 +67,9 @@ export default function Backstory() {
         <img
           src={mascot}
           alt="Simka Cat mascot rocking horse"
+          width={936}
+          height={899}
+          loading="lazy"
           className="pointer-events-none absolute bottom-[30px] left-[-56px] z-[1] w-[170px] h-auto -rotate-[7deg]"
         />
       </div>

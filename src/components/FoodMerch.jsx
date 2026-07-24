@@ -1,10 +1,17 @@
-import dripDivider2 from '../assets/drip-divider-2.png'
+import dripDivider2 from '../assets/drip-divider-2.webp'
 import { food } from '../data/content'
 
 export default function FoodMerch() {
   return (
     <section className="relative bg-orange px-[6vw] pt-[400px] pb-24">
-      <img src={dripDivider2} alt="" className="pointer-events-none absolute top-[-83px] left-0 z-[1] h-auto w-full" />
+      <img
+        src={dripDivider2}
+        alt=""
+        width={1920}
+        height={623}
+        loading="lazy"
+        className="pointer-events-none absolute top-[-83px] left-0 z-[1] h-auto w-full"
+      />
 
       <div className="mb-2.5 text-center">
         <h2 className="font-luckiest text-[clamp(34px,6vw,84px)] uppercase leading-[0.9] text-ink">
@@ -22,7 +29,14 @@ export default function FoodMerch() {
             className="flex flex-col overflow-hidden rounded-[22px] border-4 border-ink bg-white shadow-[8px_8px_0_#c6d92b]"
           >
             <div className="flex aspect-square items-center justify-center bg-white">
-              <img src={item.img} alt={item.name} className="h-full w-full object-contain" />
+              <img
+                src={item.img}
+                alt={item.name}
+                width={560}
+                height={560}
+                loading="lazy"
+                className="h-full w-full object-contain"
+              />
             </div>
             <div className="flex-1 border-t-4 border-ink px-4 pt-3.5 pb-[18px]">
               <div className="font-fredoka text-[19px] font-bold leading-none text-ink">{item.name}</div>

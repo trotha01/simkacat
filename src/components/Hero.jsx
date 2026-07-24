@@ -1,4 +1,4 @@
-import heroCoverGirl from '../assets/hero-cover-girl.png'
+import heroCoverGirl from '../assets/hero-cover-girl.webp'
 
 export default function Hero() {
   return (
@@ -7,10 +7,10 @@ export default function Hero() {
       <div className="absolute -top-[70px] -left-[90px] h-[min(44vh,360px)] w-[min(58%,600px)] origin-top-left -rotate-[4deg] border-[5px] border-ink bg-slime" />
 
       <div className="absolute top-8 left-[6%] origin-top-left -rotate-6">
-        <div className="relative font-gochi text-[clamp(72px,13vw,180px)] leading-[0.8] tracking-[2px] text-[#2b2b2b]">
+        <h1 className="relative font-gochi text-[clamp(72px,13vw,180px)] leading-[0.8] tracking-[2px] text-[#2b2b2b]">
           SIMKA
           <div className="mt-[0.05em] pl-[1.4em] text-[0.44em]">Cat</div>
-        </div>
+        </h1>
       </div>
 
       <div className="absolute top-[9%] right-[5%] w-[min(38%,430px)] font-caveat text-[#2b2b2b]">
@@ -24,6 +24,10 @@ export default function Hero() {
       <img
         src={heroCoverGirl}
         alt="Simka Cat cover girl in mod stripes"
+        width={1024}
+        height={1024}
+        loading="eager"
+        fetchpriority="high"
         className="pointer-events-none absolute right-[2%] -bottom-[6%] w-[min(42%,360px)] h-auto rotate-3 mix-blend-multiply"
       />
     </section>

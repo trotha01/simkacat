@@ -1,10 +1,17 @@
-import highkickGirl from '../assets/highkick-girl.png'
-import dripDivider1 from '../assets/drip-divider-1.png'
+import highkickGirl from '../assets/highkick-girl.webp'
+import dripDivider1 from '../assets/drip-divider-1.webp'
 
 export default function FooterCta() {
   return (
     <section className="relative bg-slime px-[6vw] pt-[400px] pb-[70px] text-center">
-      <img src={dripDivider1} alt="" className="pointer-events-none absolute top-[-62px] left-0 z-[1] h-auto w-full" />
+      <img
+        src={dripDivider1}
+        alt=""
+        width={1920}
+        height={623}
+        loading="lazy"
+        className="pointer-events-none absolute top-[-62px] left-0 z-[1] h-auto w-full"
+      />
 
       <h2 className="font-luckiest text-[clamp(40px,8vw,120px)] uppercase leading-[0.85] text-ink">The Cat&apos;s Out</h2>
       <p className="mx-auto mt-5 mb-[34px] max-w-[560px] font-fredoka text-[clamp(17px,2vw,22px)] font-medium text-[#2b2b2b]">
@@ -35,6 +42,9 @@ export default function FooterCta() {
       <img
         src={highkickGirl}
         alt="Simka Cat girl mid high-kick in cowboy boots"
+        width={1024}
+        height={1024}
+        loading="lazy"
         className="pointer-events-none absolute bottom-[-30px] left-0 z-[3] w-[min(28%,280px)] h-auto -rotate-3"
       />
     </section>

@@ -29,6 +29,9 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'react/prop-types': 'off',
+      // React DOM 18 doesn't map the camelCase `fetchPriority` prop to the
+      // DOM attribute; the lowercase form is required until React 19.
+      'react/no-unknown-property': ['error', { ignore: ['fetchpriority'] }],
     },
     settings: {
       react: { version: 'detect' },
