@@ -46,10 +46,10 @@ export default function TripleThreat() {
               ) : (
                 <span className="font-mono text-[13px] text-slime">{lead.slot}</span>
               )}
-              <span className="absolute top-[-22px] left-[-14px] rounded-3xl border-4 border-ink bg-pink px-3.5 py-1.5 font-luckiest text-[13px] uppercase text-ink">
-                {lead.tag}
-              </span>
             </div>
+            <span className="absolute top-[-22px] left-[-14px] rounded-3xl border-4 border-ink bg-pink px-3.5 py-1.5 font-luckiest text-[13px] uppercase text-ink">
+              {lead.tag}
+            </span>
           </div>
           <div>
             <div className="font-fredoka text-[13px] font-bold uppercase tracking-[3px] text-ink">The Flagship</div>
