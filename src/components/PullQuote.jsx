@@ -30,7 +30,7 @@ export default function PullQuote() {
         width={1920}
         height={623}
         loading="lazy"
-        className="pointer-events-none absolute left-0 top-full z-[1] h-auto w-full -translate-y-[10.27%]"
+        className="pointer-events-none absolute left-1/2 top-full z-[1] h-auto w-full max-w-[1400px] -translate-x-1/2 -translate-y-[30%]"
       />
     </section>
   )
