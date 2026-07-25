@@ -9,9 +9,6 @@ function SecondaryShow({ show }) {
         ) : (
           <span className="font-mono text-xs text-slime">{show.slot}</span>
         )}
-        <span className="absolute top-2 left-2 rounded-[18px] bg-pink px-2.5 py-[3px] font-luckiest text-[11px] uppercase text-ink">
-          {show.tag}
-        </span>
       </div>
       <h3 className="font-fredoka text-[clamp(22px,2.4vw,28px)] font-bold leading-none text-ink">{show.title}</h3>
       <div className="my-1 font-caveat text-[22px] leading-none text-[#e8460b]">{show.hook}</div>
@@ -47,9 +44,6 @@ export default function TripleThreat() {
                 <span className="font-mono text-[13px] text-slime">{lead.slot}</span>
               )}
             </div>
-            <span className="absolute top-[-22px] left-[-14px] rounded-3xl border-4 border-ink bg-pink px-3.5 py-1.5 font-luckiest text-[13px] uppercase text-ink">
-              {lead.tag}
-            </span>
           </div>
           <div>
             <div className="font-fredoka text-[13px] font-bold uppercase tracking-[3px] text-ink">The Flagship</div>
