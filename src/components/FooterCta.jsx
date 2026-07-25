@@ -3,7 +3,7 @@ import dripDivider1 from '../assets/drip-divider-1.webp'
 
 export default function FooterCta() {
   return (
-    <section className="relative bg-slime px-[6vw] pt-[400px] pb-[70px] text-center">
+    <section className="relative bg-slime px-[6vw] pt-[clamp(200px,20vw,320px)] pb-[70px] text-center">
       <img
         src={dripDivider1}
         alt=""

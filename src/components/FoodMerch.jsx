@@ -3,7 +3,7 @@ import { food } from '../data/content'
 
 export default function FoodMerch() {
   return (
-    <section className="relative bg-orange px-[6vw] pt-[400px] pb-24">
+    <section className="relative bg-orange px-[6vw] pt-[clamp(200px,20vw,320px)] pb-24">
       <img
         src={dripDivider2}
         alt=""

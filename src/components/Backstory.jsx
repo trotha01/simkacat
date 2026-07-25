@@ -1,4 +1,5 @@
 import mascot from '../assets/mascot-rocking-horse.webp'
+import overallsGirl from '../assets/overalls-girl.webp'
 
 export default function Backstory() {
   return (
@@ -19,6 +20,15 @@ export default function Backstory() {
           It all started when two totally fearless founders decided to make it happen — one who knows how a show
           gets made, and one who built the machine that makes them.
         </p>
+
+        <img
+          src={overallsGirl}
+          alt="Simka Cat girl in printed overalls"
+          width={1920}
+          height={1080}
+          loading="lazy"
+          className="pointer-events-none mx-auto mt-8 block h-auto w-[min(82%,360px)] rotate-2 sm:mr-[-20px] sm:ml-auto sm:w-[min(38%,430px)]"
+        />
 
         <div className="mt-11 grid grid-cols-1 gap-11 sm:grid-cols-2">
           <div>
