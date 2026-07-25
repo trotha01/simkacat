@@ -40,7 +40,7 @@ export default function TripleThreat() {
 
         <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.02fr_.98fr]">
           <div className="relative">
-            <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#3a2a1e_0_14px,#2c2016_14px_28px)] shadow-[10px_10px_0_#1c1c1c]">
+            <div className="relative flex aspect-[2/3] items-center justify-center overflow-hidden border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#3a2a1e_0_14px,#2c2016_14px_28px)] shadow-[10px_10px_0_#1c1c1c]">
               {lead.img ? (
                 <img src={lead.img} alt={lead.title} className="h-full w-full object-cover" />
               ) : (
