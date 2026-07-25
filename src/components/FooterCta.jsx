@@ -10,7 +10,7 @@ export default function FooterCta() {
         width={1920}
         height={623}
         loading="lazy"
-        className="pointer-events-none absolute top-[-62px] left-0 z-[1] h-auto w-full"
+        className="pointer-events-none absolute top-0 left-0 z-[1] h-auto w-full -translate-y-[9.95%]"
       />
 
       <h2 className="font-luckiest text-[clamp(40px,8vw,120px)] uppercase leading-[0.85] text-ink">The Cat&apos;s Out</h2>

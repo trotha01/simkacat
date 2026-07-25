@@ -10,7 +10,7 @@ export default function FoodMerch() {
         width={1920}
         height={623}
         loading="lazy"
-        className="pointer-events-none absolute top-[-83px] left-0 z-[1] h-auto w-full"
+        className="pointer-events-none absolute top-0 left-0 z-[1] h-auto w-full -translate-y-[13.32%]"
       />
 
       <div className="mb-2.5 text-center">
