@@ -34,7 +34,7 @@ export const shows = [
     title: 'Triple Threat: Bootcamp',
     tag: 'reality',
     hook: 'Talent gets you in. Grit gets you out.',
-    desc: 'Our contestants move into an intensive camp run by Broadway vocal coaches and world-tour choreographers. Cameras roll through the 6am warm-ups, the meltdowns, and the breakthroughs.',
+    desc: 'Who will be the next top Triple Threat? Our contestants move into an intensive camp run by Broadway vocal coaches and world-tour choreographers. Cameras roll through the 6am warm-ups, the meltdowns, and the breakthroughs.',
     slot: '[ key art — landscape ]',
     img: bootcampKeyArt,
   },
