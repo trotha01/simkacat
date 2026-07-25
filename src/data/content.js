@@ -7,6 +7,7 @@ import catsup from '../assets/catsup.jpg'
 import kittyChow from '../assets/kitty_chow.jpg'
 import catnip from '../assets/catnip.jpg'
 import offTheWallKeyArt from '../assets/off-the-wall-key-art.webp'
+import zFactorKeyArt from '../assets/z-factor-key-art.webp'
 
 export const food = [
   { img: scrapple, name: 'Scrapple', blurb: '#1 meat in the USA. Made for humans.' },
@@ -26,6 +27,7 @@ export const shows = [
     hook: 'Only one can be the next top Triple Threat.',
     desc: 'The nationwide search for the next singer-dancer-actor superstar. Hundreds of kids audition, but only the ones who can belt a high note, nail the choreo, AND land the scene survive each round. Live sing-offs, surprise curveball challenges, and a celebrity panel that does not hand out easy yeses — because being a Triple Threat has to be earned.',
     slot: '[ key art — portrait ]',
+    img: zFactorKeyArt,
   },
   {
     title: 'Triple Threat: Bootcamp',
