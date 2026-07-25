@@ -6,6 +6,7 @@ import bloobs from '../assets/bloobs.jpg'
 import catsup from '../assets/catsup.jpg'
 import kittyChow from '../assets/kitty_chow.jpg'
 import catnip from '../assets/catnip.jpg'
+import offTheWallKeyArt from '../assets/off-the-wall-key-art.webp'
 
 export const food = [
   { img: scrapple, name: 'Scrapple', blurb: '#1 meat in the USA. Made for humans.' },
@@ -39,6 +40,7 @@ export const shows = [
     hook: 'Fame is hard. Fighting demons is harder.',
     desc: 'A performing-arts high school where students chase spotlight dreams — and secretly hold the line against real demons that leak in after the final bell.',
     slot: '[ key art — landscape ]',
+    img: offTheWallKeyArt,
   },
 ]
 
