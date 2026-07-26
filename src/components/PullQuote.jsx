@@ -22,7 +22,7 @@ export default function PullQuote() {
         width={1920}
         height={1080}
         loading="lazy"
-        className="pointer-events-none absolute bottom-[-100px] left-[1%] z-[3] w-[min(34%,320px)] h-auto -rotate-[4deg]"
+        className="pointer-events-none absolute bottom-[clamp(-220px,-18vw,-110px)] left-[-2%] z-[3] w-[clamp(240px,42vw,560px)] h-auto -rotate-[4deg]"
       />
       <img
         src={dripDivider1}
