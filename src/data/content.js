@@ -8,6 +8,7 @@ import kittyChow from '../assets/kitty_chow.jpg'
 import catnip from '../assets/catnip.jpg'
 import offTheWallKeyArt from '../assets/off-the-wall-key-art.webp'
 import zFactorKeyArt from '../assets/z-factor-key-art.webp'
+import bootcampKeyArt from '../assets/bootcamp-key-art.webp'
 
 export const food = [
   { img: scrapple, name: 'Scrapple', blurb: '#1 meat in the USA. Made for humans.' },
@@ -35,6 +36,7 @@ export const shows = [
     hook: 'Talent gets you in. Grit gets you out.',
     desc: 'Our contestants move into an intensive camp run by Broadway vocal coaches and world-tour choreographers. Cameras roll through the 6am warm-ups, the meltdowns, and the breakthroughs.',
     slot: '[ key art — landscape ]',
+    img: bootcampKeyArt,
   },
   {
     title: 'Triple Threat: Off the Wall',

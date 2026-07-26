@@ -1,4 +1,4 @@
-import catsuitGirl from '../assets/catsuit-girl.webp'
+import pinkHorse from '../assets/pink-horse.webp'
 import dripDivider1 from '../assets/drip-divider-1.webp'
 
 export default function PullQuote() {
@@ -17,12 +17,12 @@ export default function PullQuote() {
       </div>
 
       <img
-        src={catsuitGirl}
-        alt="Simka Cat cover girl in a psychedelic catsuit"
-        width={1024}
-        height={1024}
+        src={pinkHorse}
+        alt="Simka Cat pink horse mascot"
+        width={1920}
+        height={1080}
         loading="lazy"
-        className="pointer-events-none absolute bottom-[-100px] left-[1%] z-[3] w-[min(34%,320px)] h-auto -rotate-[4deg]"
+        className="pointer-events-none absolute bottom-[clamp(-220px,-18vw,-110px)] left-[-2%] z-[3] w-[clamp(240px,42vw,560px)] h-auto -rotate-[4deg]"
       />
       <img
         src={dripDivider1}
