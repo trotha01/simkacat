@@ -3,14 +3,14 @@ import { crew } from '../data/content'
 
 export default function Crew() {
   return (
-    <section className="relative bg-slime px-[6vw] pt-[400px] pb-[90px]">
+    <section className="relative bg-slime px-[6vw] pt-[max(210px,21vw)] pb-[90px]">
       <img
         src={dripDivider1}
         alt=""
         width={1920}
         height={623}
         loading="lazy"
-        className="pointer-events-none absolute top-[-155px] left-0 z-[1] h-auto w-full"
+        className="pointer-events-none absolute top-0 left-0 z-[1] h-auto w-full -translate-y-[30%]"
       />
 
       <div className="mb-11 flex flex-wrap items-baseline justify-center gap-4">

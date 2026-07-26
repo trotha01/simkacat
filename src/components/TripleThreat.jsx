@@ -24,7 +24,7 @@ export default function TripleThreat() {
   const last = bootcamp
 
   return (
-    <section className="relative bg-slime px-[6vw] pt-[clamp(200px,20vw,320px)] pb-[90px]">
+    <section className="relative bg-slime px-[6vw] pt-[max(210px,21vw)] pb-[90px]">
       <div className="relative z-[2] mx-auto max-w-[1160px]">
         <div className="flex flex-wrap items-end justify-between gap-5 border-b-[5px] border-ink pb-3.5">
           <h2 className="font-luckiest text-[clamp(32px,5.5vw,74px)] uppercase leading-[0.85] text-ink">
