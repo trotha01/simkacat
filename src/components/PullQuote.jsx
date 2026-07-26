@@ -19,8 +19,8 @@ export default function PullQuote() {
       <img
         src={pinkHorse}
         alt="Simka Cat pink horse mascot"
-        width={1024}
-        height={1024}
+        width={1920}
+        height={1080}
         loading="lazy"
         className="pointer-events-none absolute bottom-[-100px] left-[1%] z-[3] w-[min(34%,320px)] h-auto -rotate-[4deg]"
       />
