@@ -3,14 +3,14 @@ import dripDivider1 from '../assets/drip-divider-1.webp'
 
 export default function FooterCta() {
   return (
-    <section className="relative bg-slime px-[6vw] pt-[clamp(200px,20vw,320px)] pb-[70px] text-center">
+    <section className="relative bg-slime px-[6vw] pt-[max(210px,21vw)] pb-[70px] text-center">
       <img
         src={dripDivider1}
         alt=""
         width={1920}
         height={623}
         loading="lazy"
-        className="pointer-events-none absolute top-0 left-1/2 z-[1] h-auto w-full max-w-[1400px] -translate-x-1/2 -translate-y-[30%]"
+        className="pointer-events-none absolute top-0 left-0 z-[1] h-auto w-full -translate-y-[30%]"
       />
 
       <h2 className="font-luckiest text-[clamp(40px,8vw,120px)] uppercase leading-[0.85] text-ink">The Cat&apos;s Out</h2>

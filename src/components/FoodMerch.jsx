@@ -3,14 +3,14 @@ import { food } from '../data/content'
 
 export default function FoodMerch() {
   return (
-    <section className="relative bg-orange px-[6vw] pt-[clamp(200px,20vw,320px)] pb-24">
+    <section className="relative bg-orange px-[6vw] pt-[max(210px,21vw)] pb-24">
       <img
         src={dripDivider2}
         alt=""
         width={1920}
         height={623}
         loading="lazy"
-        className="pointer-events-none absolute top-0 left-1/2 z-[1] h-auto w-full max-w-[1400px] -translate-x-1/2 -translate-y-[30%]"
+        className="pointer-events-none absolute top-0 left-0 z-[1] h-auto w-full -translate-y-[30%]"
       />
 
       <div className="mb-2.5 text-center">
