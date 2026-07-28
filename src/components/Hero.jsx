@@ -4,16 +4,18 @@ import simkaCatLogo from '../assets/simkacat-sparkle-logo.png'
 export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b-0 bg-white md:min-h-[74vh]">
+      <img
+        src={simkaCatLogo}
+        alt="Simka Cat"
+        width={1424}
+        height={801}
+        loading="eager"
+        fetchpriority="high"
+        className="absolute -top-[4vw] -left-[6vw] w-[80vw] max-w-[420px] h-auto rotate-[350deg] md:top-[-4%] md:left-[-5%] md:w-[min(58%,700px)] md:max-w-none"
+      />
+
       <div className="flex flex-col gap-4 px-[6%] pt-6 md:absolute md:inset-0 md:mx-auto md:max-w-[1400px]">
-        <img
-          src={simkaCatLogo}
-          alt="Simka Cat"
-          width={1424}
-          height={801}
-          loading="eager"
-          fetchpriority="high"
-          className="mx-auto w-full max-w-[420px] h-auto md:absolute md:top-4 md:left-[2%] md:mx-0 md:w-[min(58%,700px)] md:max-w-none"
-        />
+        <div className="pt-[44vw] md:pt-0" />
         <h1 className="sr-only">Simka Cat</h1>
 
         <div className="font-caveat text-[#2b2b2b] md:absolute md:top-[9%] md:right-[5%] md:w-[min(38%,430px)]">
