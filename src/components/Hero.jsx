@@ -4,7 +4,7 @@ import simkaCatLogo from '../assets/simkacat-sparkle-logo.png'
 export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b-0 bg-white md:min-h-[74vh]">
-      <div className="flex flex-col gap-4 px-[6%] pt-6 md:contents">
+      <div className="flex flex-col gap-4 px-[6%] pt-6 md:absolute md:inset-0 md:mx-auto md:max-w-[1400px]">
         <img
           src={simkaCatLogo}
           alt="Simka Cat"
