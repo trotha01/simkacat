@@ -11,7 +11,7 @@ export default function Hero() {
         height={801}
         loading="eager"
         fetchpriority="high"
-        className="absolute -top-[4vw] -left-[6vw] w-[80vw] max-w-[420px] h-auto rotate-[350deg] md:top-[-4%] md:left-[-4%] md:w-[min(58%,700px)] md:max-w-none"
+        className="absolute -top-[4vw] -left-[6vw] w-[80vw] max-w-[420px] h-auto rotate-[350deg] md:top-[-4%] md:left-[-5%] md:w-[min(58%,700px)] md:max-w-none"
       />
 
       <div className="flex flex-col gap-4 px-[6%] pt-6 md:absolute md:inset-0 md:mx-auto md:max-w-[1400px]">
