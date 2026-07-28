@@ -12,7 +12,7 @@ export default function Hero() {
           height={801}
           loading="eager"
           fetchpriority="high"
-          className="mx-auto w-full max-w-[420px] h-auto md:absolute md:top-4 md:left-[2%] md:mx-0 md:w-[min(58%,700px)] md:max-w-none"
+          className="mx-auto w-full max-w-[420px] h-auto rotate-[350deg] md:absolute md:-top-[2%] md:-left-[3%] md:mx-0 md:w-[min(58%,700px)] md:max-w-none"
         />
         <h1 className="sr-only">Simka Cat</h1>
 
