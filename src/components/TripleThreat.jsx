@@ -55,7 +55,7 @@ export default function TripleThreat() {
             </div>
             <p className="font-nunito text-[clamp(16px,1.6vw,19px)] leading-[1.55] text-[#1f1f1f]">{lead.desc}</p>
             <div className="mt-5 inline-block rounded-3xl bg-ink px-[18px] py-2 font-luckiest text-[13px] uppercase text-white">
-              In production now
+              {lead.status}
             </div>
           </div>
         </div>

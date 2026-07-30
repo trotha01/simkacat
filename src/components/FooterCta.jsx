@@ -1,9 +1,10 @@
 import highkickGirl from '../assets/highkick-girl.webp'
 import dripDivider1 from '../assets/drip-divider-1.webp'
+import { siteMeta } from '../data/content'
 
 export default function FooterCta() {
   return (
-    <section className="relative bg-slime px-[6vw] pt-[max(210px,21vw)] pb-[70px] text-center">
+    <footer className="relative bg-slime px-[6vw] pt-[max(210px,21vw)] pb-[70px] text-center">
       <img
         src={dripDivider1}
         alt=""
@@ -35,8 +36,28 @@ export default function FooterCta() {
         </a>
       </div>
 
-      <div className="mt-[46px] font-gochi text-base text-[#333]">
-        © Simka Cat Productions — made loud, on purpose.
+      <div className="mx-auto mt-[52px] max-w-[900px] border-t-4 border-dashed border-ink pt-8">
+        <div className="font-luckiest text-[clamp(20px,2.4vw,26px)] uppercase text-ink">{siteMeta.legalName}</div>
+        <div className="mt-1.5 font-fredoka text-[17px] font-semibold text-[#2b2b2b]">
+          {siteMeta.city}, {siteMeta.region}, {siteMeta.country}
+        </div>
+        <ul className="mt-4 flex flex-wrap items-center justify-center gap-x-7 gap-y-2.5">
+          {siteMeta.social.map((account) => (
+            <li key={account.label}>
+              <a
+                href={account.url}
+                className="font-fredoka text-[16px] font-bold text-ink underline"
+                rel="noopener"
+              >
+                {account.label} {account.handle}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mt-[34px] font-gochi text-base text-[#333]">
+        © {siteMeta.founded} {siteMeta.legalName} — made loud, on purpose.
       </div>
 
       <img
@@ -47,6 +68,6 @@ export default function FooterCta() {
         loading="lazy"
         className="pointer-events-none absolute bottom-[-30px] left-0 z-[3] w-[min(28%,280px)] h-auto -rotate-3"
       />
-    </section>
+    </footer>
   )
 }
