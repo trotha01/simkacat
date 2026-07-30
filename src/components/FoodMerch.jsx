@@ -1,5 +1,5 @@
 import dripDivider2 from '../assets/drip-divider-2.webp'
-import { food } from '../data/content'
+import { food, tilts } from '../data/content'
 
 export default function FoodMerch() {
   return (
@@ -23,10 +23,10 @@ export default function FoodMerch() {
       </div>
 
       <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-[26px] sm:grid-cols-2 lg:grid-cols-4">
-        {food.map((item) => (
+        {food.map((item, i) => (
           <div
             key={item.name}
-            className="flex flex-col overflow-hidden rounded-[22px] border-4 border-ink bg-white shadow-[8px_8px_0_#c6d92b]"
+            className={`flex flex-col overflow-hidden rounded-[22px] border-4 border-ink bg-white shadow-[8px_8px_0_#c6d92b] ${tilts[i % tilts.length]}`}
           >
             <div className="flex aspect-square items-center justify-center bg-white">
               <img

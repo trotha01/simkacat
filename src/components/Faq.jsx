@@ -1,5 +1,5 @@
 import dripDivider2 from '../assets/drip-divider-2.webp'
-import { faqs } from '../data/content'
+import { faqs, tilts } from '../data/content'
 
 export default function Faq() {
   return (
@@ -24,10 +24,10 @@ export default function Faq() {
         </div>
 
         <div className="mt-11 grid grid-cols-1 gap-[26px] sm:grid-cols-2">
-          {faqs.map((item) => (
+          {faqs.map((item, i) => (
             <div
               key={item.q}
-              className="rounded-[22px] border-4 border-ink bg-white px-[22px] pt-[18px] pb-[22px] shadow-[8px_8px_0_#c6d92b]"
+              className={`rounded-[22px] border-4 border-ink bg-white px-[22px] pt-[18px] pb-[22px] shadow-[8px_8px_0_#c6d92b] ${tilts[i % tilts.length]}`}
             >
               <h3 className="font-fredoka text-[clamp(19px,2vw,23px)] font-bold leading-[1.15] text-ink">{item.q}</h3>
               <p className="mt-2.5 font-nunito text-[clamp(15px,1.5vw,17px)] leading-[1.55] text-[#1f1f1f]">

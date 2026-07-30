@@ -18,7 +18,9 @@ export default function ShowGuide() {
         <div className="mb-11 hidden sm:block" />
       </div>
 
-      <div className="mx-auto max-w-[1160px] overflow-x-auto rounded-[18px] border-[5px] border-ink bg-white shadow-[10px_10px_0_#1c1c1c]">
+      {/* Held to 0.5deg: enough to sit with the tilted cards elsewhere, gentle
+          enough that four columns of body copy stay easy to read. */}
+      <div className="mx-auto max-w-[1160px] -rotate-[0.5deg] overflow-x-auto rounded-[18px] border-[5px] border-ink bg-white shadow-[10px_10px_0_#1c1c1c]">
         <table className="w-full min-w-[720px] border-collapse text-left">
           <caption className="sr-only">
             Simka Cat Productions series, with format, development status, and logline for each.

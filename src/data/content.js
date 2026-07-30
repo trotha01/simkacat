@@ -57,6 +57,22 @@ export const shows = [
   },
 ]
 
+// Deterministic tilt cycle for card grids, applied as tilts[i % tilts.length].
+// One shared angle on every card reads as a bug; alternating leans read as
+// hand-placed. Length is deliberately odd and coprime with the 2- and 4-column
+// grids it feeds, so the cycle drifts against the columns instead of locking
+// into a mirrored zigzag where every left card leans left. Capped at 1.5deg so
+// body copy stays comfortable to read.
+export const tilts = [
+  '-rotate-[1.2deg]',
+  'rotate-[0.8deg]',
+  '-rotate-[0.6deg]',
+  'rotate-[1.5deg]',
+  '-rotate-[1deg]',
+  'rotate-[0.6deg]',
+  '-rotate-[1.5deg]',
+]
+
 export const crew = [
   { name: 'Mychal Simka', role: 'co-founder', slot: '[ crew photo ]', tiltClass: '-rotate-2' },
   { name: 'Trevor Rothaus', role: 'co-founder', slot: '[ crew photo ]', tiltClass: 'rotate-1' },

@@ -1,4 +1,4 @@
-import { facts, siteMeta } from '../data/content'
+import { facts, siteMeta, tilts } from '../data/content'
 
 export default function WhatIsSimkaCat() {
   return (
@@ -18,10 +18,10 @@ export default function WhatIsSimkaCat() {
         </p>
 
         <dl className="mt-11 grid grid-cols-1 gap-[22px] sm:grid-cols-2 lg:grid-cols-4">
-          {facts.map((fact) => (
+          {facts.map((fact, i) => (
             <div
               key={fact.label}
-              className="rounded-[18px] border-4 border-ink bg-white px-[18px] pt-3.5 pb-4 shadow-[8px_8px_0_#1c1c1c]"
+              className={`rounded-[18px] border-4 border-ink bg-white px-[18px] pt-3.5 pb-4 shadow-[8px_8px_0_#1c1c1c] ${tilts[i % tilts.length]}`}
             >
               <dt className="font-luckiest text-[13px] uppercase tracking-[1.5px] text-[#e8460b]">{fact.label}</dt>
               <dd className="mt-1.5 font-nunito text-[clamp(15px,1.5vw,17px)] font-semibold leading-[1.4] text-ink">

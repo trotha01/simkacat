@@ -1,9 +1,11 @@
 import { shows } from '../data/content'
 
-function SecondaryShow({ show }) {
+function SecondaryShow({ show, tiltClass }) {
   return (
     <div>
-      <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden border-4 border-ink bg-[repeating-linear-gradient(45deg,#3a2a1e_0_14px,#2c2016_14px_28px)] shadow-[7px_7px_0_#1c1c1c]">
+      <div
+        className={`relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden border-4 border-ink bg-[repeating-linear-gradient(45deg,#3a2a1e_0_14px,#2c2016_14px_28px)] shadow-[7px_7px_0_#1c1c1c] ${tiltClass}`}
+      >
         {show.img ? (
           <img src={show.img} alt={show.title} className="h-full w-full object-cover" />
         ) : (
@@ -37,7 +39,7 @@ export default function TripleThreat() {
 
         <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.02fr_.98fr]">
           <div className="relative">
-            <div className="relative flex aspect-[2/3] items-center justify-center overflow-hidden border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#3a2a1e_0_14px,#2c2016_14px_28px)] shadow-[10px_10px_0_#1c1c1c]">
+            <div className="relative flex aspect-[2/3] -rotate-[1.2deg] items-center justify-center overflow-hidden border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#3a2a1e_0_14px,#2c2016_14px_28px)] shadow-[10px_10px_0_#1c1c1c]">
               {lead.img ? (
                 <img src={lead.img} alt={lead.title} className="h-full w-full object-cover" />
               ) : (
@@ -61,8 +63,8 @@ export default function TripleThreat() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-10 border-t-4 border-dashed border-ink pt-11 sm:grid-cols-2">
-          <SecondaryShow show={mid} />
-          <SecondaryShow show={last} />
+          <SecondaryShow show={mid} tiltClass="rotate-[1.2deg]" />
+          <SecondaryShow show={last} tiltClass="-rotate-[0.8deg]" />
         </div>
       </div>
     </section>

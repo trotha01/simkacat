@@ -1,5 +1,5 @@
 import dripDivider1 from '../assets/drip-divider-1.webp'
-import { stats } from '../data/content'
+import { stats, tilts } from '../data/content'
 
 export default function Numbers() {
   return (
@@ -22,10 +22,10 @@ export default function Numbers() {
         </div>
 
         <div className="mt-11 grid grid-cols-1 gap-[26px] sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
+          {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="rounded-[22px] border-4 border-ink bg-white px-5 pt-4 pb-[22px] shadow-[8px_8px_0_#f28cb1]"
+              className={`rounded-[22px] border-4 border-ink bg-white px-5 pt-4 pb-[22px] shadow-[8px_8px_0_#f28cb1] ${tilts[i % tilts.length]}`}
             >
               <div className="font-luckiest text-[clamp(48px,7vw,76px)] leading-[0.85] text-[#e8460b]">
                 {stat.value}
