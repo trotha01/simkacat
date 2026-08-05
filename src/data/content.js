@@ -92,7 +92,7 @@ export const siteMeta = {
   url: 'https://simkacat.com',
   tagline: 'Turn it up.',
   description:
-    "Simka Cat Productions is an independent children's television studio in Burbank, California, founded in 2026 by Mychal Simka and Trevor Rothaus. It develops kids' series — starting with the three-show Triple Threat slate — built on chaos and slime up front, with real character arcs underneath.",
+    "Simka Cat Productions is an independent television studio in Burbank, California, founded in 2026 by Mychal Simka and Trevor Rothaus. It develops kids' series — starting with the three-show Triple Threat slate — built on chaos and slime up front, with real character arcs underneath.",
   founded: '2026',
   city: 'Burbank',
   region: 'California',
@@ -128,7 +128,7 @@ export const stats = [
 export const faqs = [
   {
     q: 'What is Simka Cat Productions?',
-    a: "Simka Cat Productions is an independent children's television studio based in Burbank, California. It develops kids' series that look like chaos and slime on the surface but run on real character arcs and real stakes underneath.",
+    a: "Simka Cat Productions is an independent television studio based in Burbank, California. It develops kids' series that look like chaos and slime on the surface but run on real character arcs and real stakes underneath.",
   },
   {
     q: 'Who founded Simka Cat Productions?',
