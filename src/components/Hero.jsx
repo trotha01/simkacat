@@ -16,7 +16,9 @@ export default function Hero() {
 
       <div className="flex flex-col gap-4 px-[6%] pt-6 md:absolute md:inset-0 md:mx-auto md:max-w-[1400px]">
         <div className="pt-[44vw] md:pt-0" />
-        <h1 className="sr-only">Simka Cat</h1>
+        <h1 className="sr-only">
+          Simka Cat Productions — kids&apos; TV shows with chaos on top and a real story underneath
+        </h1>
 
         <div className="font-caveat text-[#2b2b2b] md:absolute md:top-[9%] md:right-[5%] md:w-[min(38%,430px)]">
           <div className="text-[clamp(26px,3.4vw,44px)] font-bold leading-none">Why Simka&nbsp;Cat?</div>

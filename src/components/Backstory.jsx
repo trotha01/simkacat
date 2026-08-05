@@ -20,7 +20,7 @@ export default function Backstory() {
 
         <div className="mt-11 grid grid-cols-1 gap-11 sm:grid-cols-2">
           <div>
-            <div className="relative flex aspect-[4/5] items-center justify-center border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#fff_0_16px,#ffe8d3_16px_32px)] shadow-[10px_10px_0_#1c1c1c]">
+            <div className="relative flex aspect-[4/5] -rotate-[1.5deg] items-center justify-center border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#fff_0_16px,#ffe8d3_16px_32px)] shadow-[10px_10px_0_#1c1c1c]">
               <span className="font-mono text-[13px] text-[#8a4a12]">[ photo: Mychal Simka ]</span>
               <span className="absolute -top-5 -left-3.5 rounded-3xl border-4 border-ink bg-pink px-3.5 py-1.5 font-luckiest text-[13px] uppercase text-ink">
                 The Storyteller
@@ -35,7 +35,7 @@ export default function Backstory() {
             </p>
           </div>
           <div>
-            <div className="relative flex aspect-[4/5] items-center justify-center border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#fff_0_16px,#ffe8d3_16px_32px)] shadow-[10px_10px_0_#1c1c1c]">
+            <div className="relative flex aspect-[4/5] rotate-[1.5deg] items-center justify-center border-[5px] border-ink bg-[repeating-linear-gradient(45deg,#fff_0_16px,#ffe8d3_16px_32px)] shadow-[10px_10px_0_#1c1c1c]">
               <span className="font-mono text-[13px] text-[#8a4a12]">[ photo: Trevor Rothaus ]</span>
               <span className="absolute -top-5 -left-3.5 rounded-3xl border-4 border-ink bg-pink px-3.5 py-1.5 font-luckiest text-[13px] uppercase text-ink">
                 The Builder
