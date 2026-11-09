@@ -6,7 +6,7 @@ export const actors = [
   { slug: 'hilaryduff', name: 'Hilary Duff', img: img('hilaryduff'), credit: 'Greg2600', license: 'CC BY-SA 2.0', page: 'https://commons.wikimedia.org/wiki/File:Hilary_Duff_(35661671285)_(cropped)_(3).jpg' },
   { slug: 'ashleytisdale', name: 'Ashley Tisdale', img: img('ashleytisdale'), credit: 'GloriaGaynor', license: 'CC BY-SA 3.0', page: 'https://commons.wikimedia.org/wiki/File:AshleyTis.jpg' },
   { slug: 'kenjeong', name: 'Ken Jeong', img: img('kenjeong'), credit: 'Gage Skidmore', license: 'CC BY-SA 3.0', page: 'https://commons.wikimedia.org/wiki/File:Ken_Jeong_by_Gage_Skidmore.jpg' },
-  { slug: 'bellathorne', name: 'Bella Thorne', img: img('bellathorne'), credit: 'OnlyFans', license: 'CC BY 3.0', page: 'https://commons.wikimedia.org/wiki/File:Bella_Thorne_OnlyFans_3.jpg' },
+  { slug: 'bellathorne', name: 'Bella Thorne', img: img('bellathorne'), credit: 'AMFM STUDIOS LLC', license: 'CC BY 3.0', page: 'https://commons.wikimedia.org/wiki/File:Bella_Thorne_2022.jpg' },
   { slug: 'taylorkitsch', name: 'Taylor Kitsch', img: img('taylorkitsch'), credit: 'Moody College of Communication from Austin, USA', license: 'CC BY-SA 2.0', page: 'https://commons.wikimedia.org/wiki/File:Stephanie_Simon_%26_Taylor_Kitsch_-_Sept_23,_2019_(48788474567)_(cropped).jpg' },
   { slug: 'kimbasinger', name: 'Kim Basinger', img: img('kimbasinger'), credit: 'Kevin Paul', license: 'CC BY 4.0', page: 'https://commons.wikimedia.org/wiki/File:Kim_Basinger_-_The_Natural.jpg' },
   { slug: 'benkingsley', name: 'Ben Kingsley', img: img('benkingsley'), credit: 'Gage Skidmore', license: 'CC BY-SA 3.0', page: 'https://commons.wikimedia.org/wiki/File:Ben_Kingsley_by_Gage_Skidmore.jpg' },
