@@ -22,7 +22,7 @@ export default function Credits() {
       {import.meta.env.VITE_STATIC_PREVIEW === '1' && (
         <p className="mt-4 rounded-xl border-2 border-dashed border-ink/40 bg-slime/30 px-4 py-3 text-sm">
           <strong>Review:</strong> this grid is being redesigned with headshots.{' '}
-          <a href="./actors-options.html" target="_blank" rel="noreferrer" className="font-semibold">
+          <a href={import.meta.env.VITE_ACTORS_OPTIONS_URL || "./actors-options.html"} target="_blank" rel="noreferrer" className="font-semibold">
             See the four layout options →
           </a>
         </p>
