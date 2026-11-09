@@ -19,6 +19,9 @@ PR only; no production deploy until Trevor approves.
 - Showcase now uses six AI-generated concept stills (Higgsfield gpt_image_2_6, ~1.5 credits total) in public/showcase/:
   parking deck → Mediterranean quay, diner recast, Mandarin original → English dub. Labelled "AI concept still".
 
+## Done (round 4, Trevor's feedback)
+- Removed every "AI concept still" badge; before/after frames now stack vertically at full width so no actor is cropped.
+
 ## Pending (needs Trevor)
 - Final read of bios/credits; add headshots if wanted (founders[].photo).
 - Supply moving demos when ready (add `video:` to a showcase tile), esp. the Chinese→English lip-sync clip.
