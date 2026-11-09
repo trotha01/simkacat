@@ -28,6 +28,10 @@ PR only; no production deploy until Trevor approves.
 - CORS on all three Workers is already `*` (healthz, playlist, preflight): no ai-247 change needed.
 - Puddle Park /healthz returns ok:false and its playlist 503s, so it shows off air.
 
+## Not received
+- Orchestrator check-in referenced "Mychal's credits + actors grid" and "posters from Drive". No such instruction reached
+  this session; nothing was downloaded or attempted. Needs the brief (what grid, which Drive folder).
+
 ## Pending (needs Trevor)
 - Final read of bios/credits; add headshots if wanted (founders[].photo).
 - Supply moving demos when ready (add `video:` to a showcase tile), esp. the Chinese→English lip-sync clip.
