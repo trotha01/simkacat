@@ -47,5 +47,8 @@ PR only; no production deploy until Trevor approves.
 - Approve merge + live deploy. Preview URL: Netlify deploy preview should appear on the PR if enabled (site name
   unknown from this session).
 
+## Handover
+- Orchestrator reassigned PR #9 to local worker simka-finish. This cloud session stopped with a clean tree; last commit 9fec9ca.
+
 ## Next step
 - Trevor reviews PR #9; on OK, merge (Netlify deploys main to simka.cat).
