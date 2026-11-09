@@ -1,0 +1,25 @@
+import Section from './Section'
+import ActorsGrid from './ActorsGrid'
+import { credits } from '../data/content'
+
+export default function Credits() {
+  return (
+    <Section id="credits" tone="white" eyebrow="Credits" title="Mychal Simka: twelve animated features" intro={credits.rolesLine}>
+      <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        {credits.films.map((f) => (
+          <li key={f.title} className="flex flex-col gap-2">
+            <div className="aspect-[2/3] overflow-hidden rounded-xl border-2 border-ink bg-ink shadow-[5px_5px_0_#1c1c1c]">
+              <img src={f.poster} alt={`${f.title} poster`} className="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <div className="font-fredoka text-sm font-bold leading-tight">{f.title}</div>
+              <div className="text-xs text-ink/60">{f.year}</div>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <ActorsGrid heading={credits.actorsHeading} />
+    </Section>
+  )
+}

@@ -1,60 +1,195 @@
-import scrapple from '../assets/simkacat_scrapple.jpg'
-import orangeSludge from '../assets/orange_sludge.jpg'
-import greenSludge from '../assets/green_sludge.jpg'
-import purpleSludge from '../assets/purple_sludge.jpg'
-import bloobs from '../assets/bloobs.jpg'
-import catsup from '../assets/catsup.jpg'
-import kittyChow from '../assets/kitty_chow.jpg'
-import catnip from '../assets/catnip.jpg'
-import offTheWallKeyArt from '../assets/off-the-wall-key-art.webp'
-import zFactorKeyArt from '../assets/z-factor-key-art.webp'
-import bootcampKeyArt from '../assets/bootcamp-key-art.webp'
+import posterMouseTale from '../assets/posters/a-mouse-tale-2012.webp'
+import posterBirds from '../assets/posters/birds-of-paradise-2010.webp'
+import posterDelhi from '../assets/posters/delhi-safari-2012.webp'
+import posterElephant from '../assets/posters/elephant-kingdom-2009.webp'
+import posterFrog from '../assets/posters/frog-kingdom-2013.webp'
+import posterHuevos from '../assets/posters/huevos-little-rooster-s-egg-cellent-adventure-2015.webp'
+import posterRabbit from '../assets/posters/legend-of-kung-fu-rabbit-2011.webp'
+import posterSnowflake from '../assets/posters/snowflake-the-white-gorilla-2011.webp'
+import posterGiantKing from '../assets/posters/the-giant-king-2012.webp'
+import posterPororo from '../assets/posters/the-little-penguin-pororo-s-racing-adventure-2013.webp'
+import posterWings from '../assets/posters/wings-2012.webp'
+import posterWings2 from '../assets/posters/wings-sky-force-heroes-2014.webp'
 
-export const food = [
-  { img: scrapple, name: 'Scrapple', blurb: '#1 meat in the USA. Made for humans.' },
-  { img: orangeSludge, name: 'Sludge — Orange', blurb: 'Our signature Orange Sludge in a jar. Keep refrigerated.' },
-  { img: greenSludge, name: 'Sludge — Green', blurb: 'Our signature Green Sludge in a jar. Keep refrigerated.' },
-  { img: purpleSludge, name: 'Sludge — Purple', blurb: 'Our signature Purple Sludge in a jar. Keep refrigerated.' },
-  { img: bloobs, name: 'Bloobs', blurb: 'Berry-flavored gummy blobs.' },
-  { img: catsup, name: 'Bloodbath Catsup', blurb: 'Terrifyingly delicious. Not for cats!' },
-  { img: kittyChow, name: 'Old Fashioned Kitty Chow', blurb: 'Chocolate, peanut butter & puffed grain.' },
-  { img: catnip, name: 'Catnip Seasoning', blurb: 'Great on everything.' },
+// Single source of truth for site copy.
+
+export const siteMeta = {
+  name: 'Simka Cat',
+  legalName: 'Simka Cat Productions',
+  url: 'https://simka.cat',
+  tagline: 'A production studio by Mychal Simka and Trevor Rothaus.',
+  description:
+    'Simka Cat Productions is the studio of Mychal Simka and Trevor Rothaus: production, publicity and celebrity access, AI video (background and person replacement, translation and lip sync), and always-on AI channels.',
+  email: 'mychal@simka.cat',
+}
+
+export const nav = [
+  { href: '#who', label: 'Who we are' },
+  { href: '#credits', label: 'Credits' },
+  { href: '#services', label: 'Services' },
+  { href: '#showcase', label: 'Showcase' },
+  { href: '#channels', label: 'Channels' },
+  { href: '#deepinfer', label: 'DeepInfer' },
 ]
 
-export const shows = [
+export const founders = [
   {
-    title: 'Triple Threat: Z Factor',
-    tag: 'competition',
-    hook: 'Only one can be the next top Triple Threat.',
-    desc: 'The nationwide search for the next singer-dancer-actor superstar. Hundreds of kids audition, but only the ones who can belt a high note, nail the choreo, AND land the scene survive each round. Live sing-offs, surprise curveball challenges, and a celebrity panel that does not hand out easy yeses — because being a Triple Threat has to be earned.',
-    slot: '[ key art — portrait ]',
-    img: zFactorKeyArt,
+    name: 'Mychal Simka',
+    role: 'Co-founder · Producer, writer, casting director',
+    photo: null, // add a headshot (src/assets/mychal.webp) and import it here
+    bio: [
+      'Mychal has spent more than a decade making animated features: writing, casting, producing and directing English-language versions for international release. The studio carries his name.',
+      'Twelve animated features as producer, director, writer, casting director and editor, with voice casts from Ariana Grande and Hilary Duff to Ben Kingsley and Kim Basinger. He brings those talent relationships and publicity instincts to every project.',
+    ],
+    links: [],
   },
   {
-    title: 'Triple Threat: Bootcamp',
-    tag: 'reality',
-    hook: 'Talent gets you in. Grit gets you out.',
-    desc: 'Our contestants move into an intensive camp run by Broadway vocal coaches and world-tour choreographers. Cameras roll through the 6am warm-ups, the meltdowns, and the breakthroughs.',
-    slot: '[ key art — landscape ]',
-    img: bootcampKeyArt,
-  },
-  {
-    title: 'Triple Threat: Off the Wall',
-    tag: 'scripted',
-    hook: 'Fame is hard. Fighting demons is harder.',
-    desc: 'A performing-arts high school where students chase spotlight dreams — and secretly hold the line against real demons that leak in after the final bell.',
-    slot: '[ key art — landscape ]',
-    img: offTheWallKeyArt,
+    name: 'Trevor Rothaus',
+    role: 'Co-founder · Engineering and scale',
+    photo: null, // add a headshot (src/assets/trevor.webp) and import it here
+    bio: [
+      'Trevor builds systems that scale. At SendGrid he was a core developer through the years that took the company from a Series C startup to a multi-billion-dollar public company and its acquisition by Twilio, working on infrastructure that delivered email for tens of thousands of customers.',
+    ],
+    links: [],
   },
 ]
 
-export const crew = [
-  { name: 'Mychal Simka', role: 'co-founder', slot: '[ crew photo ]', tiltClass: '-rotate-2' },
-  { name: 'Trevor Rothaus', role: 'co-founder', slot: '[ crew photo ]', tiltClass: 'rotate-1' },
+// Mychal's twelve films (Trevor's list, verbatim), with their posters.
+export const credits = {
+  rolesLine: 'Producer, Director, Writer, Casting Director, and Editor for all 12 films.',
+  films: [
+    { title: "Huevos: Little Rooster's Egg-cellent Adventure", year: 2015, poster: posterHuevos },
+    { title: 'Wings: Sky Force Heroes', year: 2014, poster: posterWings2 },
+    { title: 'Frog Kingdom', year: 2013, poster: posterFrog },
+    { title: "The Little Penguin: Pororo's Racing Adventure", year: 2013, poster: posterPororo },
+    { title: 'A Mouse Tale', year: 2012, poster: posterMouseTale },
+    { title: 'Wings', year: 2012, poster: posterWings },
+    { title: 'Dehli Safari', year: 2012, poster: posterDelhi },
+    { title: 'The Giant King', year: 2012, poster: posterGiantKing },
+    { title: 'Legend of Kung Fu Rabbit', year: 2011, poster: posterRabbit },
+    { title: 'Snowflake, the White Gorilla', year: 2011, poster: posterSnowflake },
+    { title: 'Birds of Paradise', year: 2010, poster: posterBirds },
+    { title: 'Elephant Kingdom', year: 2009, poster: posterElephant },
+  ],
+  actorsHeading: 'Top actors Mychal has worked with',
+  actors: [
+    'Ariana Grande', 'Hilary Duff', 'Ashley Tisdale', 'Ken Jeong', 'Bella Thorne', 'Taylor Kitsch',
+    'Kim Basinger', 'Ben Kingsley', 'Smash Mouth', 'Kings of Leon', 'Miranda Cosgrove', 'Josh Duhamel',
+    'Rob Schneider', 'Drake Bell', 'Jon Heder', 'Carlos PenaVega', 'Alyson Stoner', 'Cary Elwes',
+    'Keith David', 'Michael Clarke Duncan', 'Jason Mewes', 'Tom Arnold', 'Jon Lovitz', 'Russell Peters',
+    'Cameron Dallas', 'Rebecca Black', 'Gregg Sulkin', 'Romeo Miller', 'Zachary Gordon', 'Leon Thomas III',
+  ],
+}
+
+export const services = [
+  {
+    name: 'Production',
+    blurb: 'Development through delivery: writing, casting, voice direction, animation and edit. Features, series, shorts and branded content.',
+  },
+  {
+    name: 'Publicity & celebrity access',
+    blurb: 'Campaign publicity, press and premiere strategy, and talent relationships built over a decade of casting: we get your project in front of the right names and the right rooms.',
+  },
+  {
+    name: 'AI video services',
+    blurb: 'Background replacement, person replacement, translation with lip sync. Localise an existing cut or produce new material at a fraction of the usual cost.',
+  },
+  {
+    name: 'Localisation & dubbing',
+    blurb: 'English versions of international features and the other way round: script adaptation, casting, recording, and AI-assisted lip sync where it helps.',
+  },
+  {
+    name: 'Your own 24/7 channel',
+    blurb: 'An always-on, AI-generated channel on your subject, in your voice, labelled as AI and citing its sources. We run three of our own.',
+  },
+  {
+    name: 'Inference & tooling',
+    blurb: 'The engineering behind all of it, also available on its own: pipelines, model hosting and custom tools for studios and publishers.',
+  },
 ]
 
-export const brand = {
-  orange: '#ff6a13',
-  slime: '#c6d92b',
-  pink: '#f28cb1',
+// Showcase tiles. Stills are AI-generated concept frames in public/showcase/.
+// When a moving demo exists, add `video: '/showcase/<name>.mp4'` (and an
+// optional `poster`) to the tile and it replaces the still.
+export const showcase = [
+  {
+    id: 'background',
+    title: 'Background replacement',
+    caption:
+      'Shot on a Burbank parking deck, delivered on a Mediterranean quay. Same actress, same take, same light: the location is the only thing that changed. Pickups and inserts without travel, permits or a second unit.',
+    kind: 'before-after',
+    before: { src: '/showcase/bg-before.webp', label: 'As shot', alt: 'Woman in a trench coat on the phone on an empty parking deck' },
+    after: { src: '/showcase/bg-after.webp', label: 'Delivered', alt: 'The same woman, same pose, now on a harbour quay at golden hour' },
+  },
+  {
+    id: 'person',
+    title: 'Person replacement',
+    caption:
+      'Recast a finished scene for a territory, or replace a performer who is no longer available. Blocking, wardrobe, lighting and the other actor stay locked; only the face and body change.',
+    kind: 'before-after',
+    before: { src: '/showcase/person-before.webp', label: 'Original cast', alt: 'Two actors talking in a diner booth at night' },
+    after: { src: '/showcase/person-after.webp', label: 'Recast', alt: 'The same diner scene with a different actor on the left' },
+  },
+  {
+    id: 'lipsync',
+    title: 'Translation & lip sync',
+    caption:
+      'Dub a finished film into a new language and match the mouth to the new line, so the dubbed version plays like an original. Subtitled territories become dubbed territories at a fraction of ADR cost.',
+    kind: 'single',
+    src: '/showcase/lipsync.webp',
+    label: 'Original: Mandarin',
+    alt: 'Close-up of an actress in period costume mid-line with a Chinese subtitle',
+  },
+  {
+    id: 'zh-en',
+    title: 'Chinese → English lip sync',
+    caption:
+      'The same performance, re-voiced in English with the lips re-timed to the new dialogue. A 30-second moving demo on a licensed clip is in production for AFM.',
+    kind: 'single',
+    src: '/showcase/zh-en.webp',
+    label: 'Dubbed: English',
+    alt: 'The same close-up with the English line "I won\'t wait for you anymore" as the subtitle',
+    featured: true,
+  },
+]
+
+export const channels = {
+  url: 'https://ai-247.pages.dev/',
+  // stream = the channel Worker's HLS playlist; health = its /healthz ({ ok: boolean }).
+  list: [
+    {
+      id: 'ai247',
+      name: 'AI News',
+      desc: 'Short news bulletins written and voiced by AI from public primary-source feeds, each one citing its sources.',
+      stream: 'https://ai247-live.trotha01.workers.dev/live.m3u8',
+      health: 'https://ai247-live.trotha01.workers.dev/healthz',
+      still: '/channels/ai247.webp',
+    },
+    {
+      id: 'lang',
+      name: 'Lingua',
+      desc: 'Latin, Greek and Hebrew one verse at a time: a word-by-word gloss, read slowly, then at normal speed, then in English.',
+      stream: 'https://lang-live.trotha01.workers.dev/live.m3u8',
+      health: 'https://lang-live.trotha01.workers.dev/healthz',
+      still: '/channels/lang.webp',
+    },
+    {
+      id: 'puddle',
+      name: 'Puddle Park',
+      desc: 'Felt puppets in a park, with scenes written, voiced and animated by AI as they air.',
+      stream: 'https://puddle-live.trotha01.workers.dev/live.m3u8',
+      health: 'https://puddle-live.trotha01.workers.dev/healthz',
+    },
+  ],
+}
+
+export const deepinfer = {
+  name: 'DeepInfer',
+  // Replace with the 5-line pitch from knowledge-base-lab
+  // reports/deepinfer-business-model.org once that report is merged.
+  pitch: [
+    'DeepInfer is the inference business behind Simka Cat: the model hosting and pipelines that run our AI video work and our 24/7 channels.',
+    'We are writing up the business model now. Investors who want the full report early can ask for it below.',
+  ],
+  status: 'Business model report in progress',
 }
