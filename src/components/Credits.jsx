@@ -19,6 +19,14 @@ export default function Credits() {
       </ul>
 
       <h3 className="mt-16 font-luckiest text-[clamp(24px,3.2vw,38px)] uppercase leading-none">{credits.actorsHeading}</h3>
+      {import.meta.env.VITE_STATIC_PREVIEW === '1' && (
+        <p className="mt-4 rounded-xl border-2 border-dashed border-ink/40 bg-slime/30 px-4 py-3 text-sm">
+          <strong>Review:</strong> this grid is being redesigned with headshots.{' '}
+          <a href="./actors-options.html" target="_blank" rel="noreferrer" className="font-semibold">
+            See the four layout options →
+          </a>
+        </p>
+      )}
       <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
         {credits.actors.map((name, i) => (
           <li
