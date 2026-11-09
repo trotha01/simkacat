@@ -17,10 +17,10 @@ export const siteMeta = {
   name: 'Simka Cat',
   legalName: 'Simka Cat Productions',
   url: 'https://simka.cat',
-  tagline: 'A production studio by Trevor Rothaus and Mychal Simka.',
+  tagline: 'A production studio by Mychal Simka and Trevor Rothaus.',
   description:
-    'Simka Cat Productions is the studio of Trevor Rothaus and Mychal Simka: production, publicity and celebrity access, AI video (background and person replacement, translation and lip sync), and always-on AI channels.',
-  email: 'hello@simka.cat',
+    'Simka Cat Productions is the studio of Mychal Simka and Trevor Rothaus: production, publicity and celebrity access, AI video (background and person replacement, translation and lip sync), and always-on AI channels.',
+  email: 'mychal@simka.cat',
 }
 
 export const nav = [
