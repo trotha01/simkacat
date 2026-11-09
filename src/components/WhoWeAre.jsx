@@ -25,7 +25,7 @@ export default function WhoWeAre() {
                 </p>
               ))}
               <ul className="mt-4 flex flex-wrap gap-3">
-                {f.links.map((l) => (
+                {(f.links || []).map((l) => (
                   <li key={l.url}>
                     <a href={l.url} target="_blank" rel="noreferrer" className="font-semibold underline">
                       {l.label}

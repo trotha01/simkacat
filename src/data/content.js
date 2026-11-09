@@ -1,5 +1,17 @@
-// Single source of truth for site copy. Nothing here is invented: every credit
-// carries the public source it was read from.
+import posterMouseTale from '../assets/posters/a-mouse-tale-2012.webp'
+import posterBirds from '../assets/posters/birds-of-paradise-2010.webp'
+import posterDelhi from '../assets/posters/delhi-safari-2012.webp'
+import posterElephant from '../assets/posters/elephant-kingdom-2009.webp'
+import posterFrog from '../assets/posters/frog-kingdom-2013.webp'
+import posterHuevos from '../assets/posters/huevos-little-rooster-s-egg-cellent-adventure-2015.webp'
+import posterRabbit from '../assets/posters/legend-of-kung-fu-rabbit-2011.webp'
+import posterSnowflake from '../assets/posters/snowflake-the-white-gorilla-2011.webp'
+import posterGiantKing from '../assets/posters/the-giant-king-2012.webp'
+import posterPororo from '../assets/posters/the-little-penguin-pororo-s-racing-adventure-2013.webp'
+import posterWings from '../assets/posters/wings-2012.webp'
+import posterWings2 from '../assets/posters/wings-sky-force-heroes-2014.webp'
+
+// Single source of truth for site copy.
 
 export const siteMeta = {
   name: 'Simka Cat',
@@ -27,12 +39,9 @@ export const founders = [
     photo: null, // add a headshot (src/assets/mychal.webp) and import it here
     bio: [
       'Mychal has spent more than a decade making animated features: writing, casting, producing and directing English-language versions for international release. The studio carries his name.',
-      'He brings the talent relationships, the casting eye and the publicity instincts that get a project noticed.',
+      'Twelve animated features as producer, director, writer, casting director and editor, with voice casts from Ariana Grande and Hilary Duff to Ben Kingsley and Kim Basinger. He brings those talent relationships and publicity instincts to every project.',
     ],
-    links: [
-      { label: 'IMDb', url: 'https://www.imdb.com/name/nm2949944/' },
-      { label: 'TMDB', url: 'https://www.themoviedb.org/person/1272720-mychal-simka' },
-    ],
+    links: [],
   },
   {
     name: 'Trevor Rothaus',
@@ -49,18 +58,30 @@ export const founders = [
   },
 ]
 
-// Credits. `source` says where each credit was read.
+// Mychal's twelve films (Trevor's list, verbatim), with their posters.
 export const credits = {
-  mychal: [
-    { title: 'Elephant Kingdom', year: 2016, role: 'Writer', source: 'TMDB' },
-    { title: "Huevos: Little Rooster's Egg-Cellent Adventure", year: 2015, role: 'Screenplay, producer, casting', source: 'TMDB' },
-    { title: 'I Am Here', year: 2015, role: 'Casting', source: 'TMDB' },
-    { title: 'Wings: Sky Force Heroes', year: 2014, role: 'Director', source: 'TMDB' },
-    { title: 'Frog Kingdom', year: 2013, role: 'Writer; voice of Froggy Ababwa', source: 'TMDB' },
-    { title: 'A Mouse Tale', year: 2012, role: 'Producer, writer, English-version director', source: 'IMDb' },
-    { title: 'Wings', year: 2012, role: 'Voice (Radio Announcer)', source: 'TMDB' },
-    { title: 'The Portal', year: 2010, role: 'Editor', source: 'TMDB' },
-    { title: 'The Adventures of Bunny Bravo', year: 2022, role: 'Producer', source: 'IMDb' },
+  rolesLine: 'Producer, Director, Writer, Casting Director, and Editor for all 12 films.',
+  films: [
+    { title: "Huevos: Little Rooster's Egg-cellent Adventure", year: 2015, poster: posterHuevos },
+    { title: 'Wings: Sky Force Heroes', year: 2014, poster: posterWings2 },
+    { title: 'Frog Kingdom', year: 2013, poster: posterFrog },
+    { title: "The Little Penguin: Pororo's Racing Adventure", year: 2013, poster: posterPororo },
+    { title: 'A Mouse Tale', year: 2012, poster: posterMouseTale },
+    { title: 'Wings', year: 2012, poster: posterWings },
+    { title: 'Dehli Safari', year: 2012, poster: posterDelhi },
+    { title: 'The Giant King', year: 2012, poster: posterGiantKing },
+    { title: 'Legend of Kung Fu Rabbit', year: 2011, poster: posterRabbit },
+    { title: 'Snowflake, the White Gorilla', year: 2011, poster: posterSnowflake },
+    { title: 'Birds of Paradise', year: 2010, poster: posterBirds },
+    { title: 'Elephant Kingdom', year: 2009, poster: posterElephant },
+  ],
+  actorsHeading: 'Top actors Mychal has worked with',
+  actors: [
+    'Ariana Grande', 'Hilary Duff', 'Ashley Tisdale', 'Ken Jeong', 'Bella Thorne', 'Taylor Kitsch',
+    'Kim Basinger', 'Ben Kingsley', 'Smash Mouth', 'Kings of Leon', 'Miranda Cosgrove', 'Josh Duhamel',
+    'Rob Schneider', 'Drake Bell', 'Jon Heder', 'Carlos PenaVega', 'Alyson Stoner', 'Cary Elwes',
+    'Keith David', 'Michael Clarke Duncan', 'Jason Mewes', 'Tom Arnold', 'Jon Lovitz', 'Russell Peters',
+    'Cameron Dallas', 'Rebecca Black', 'Gregg Sulkin', 'Romeo Miller', 'Zachary Gordon', 'Leon Thomas III',
   ],
 }
 
