@@ -8,10 +8,13 @@ export default function Footer() {
     <footer className="bg-ink px-5 py-12 text-cream sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div>
-          <div className="font-luckiest text-2xl uppercase">Simka Cat Productions</div>
+          <div className="font-luckiest text-2xl uppercase">{siteMeta.legalName}</div>
           <p className="mt-2 max-w-sm text-cream/70">{siteMeta.tagline}</p>
           <a href={`mailto:${siteMeta.email}`} className="mt-3 inline-block font-semibold text-slime no-underline">
             {siteMeta.email}
+          </a>
+          <a href={siteMeta.imdb} target="_blank" rel="noreferrer" className="mt-2 block font-semibold text-cream/80 underline hover:text-cream">
+            Simka Entertainment on IMDb ↗
           </a>
         </div>
         <ul className="grid grid-cols-2 gap-x-10 gap-y-2 sm:grid-cols-3">

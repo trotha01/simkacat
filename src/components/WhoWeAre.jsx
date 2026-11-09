@@ -5,7 +5,7 @@ export default function WhoWeAre() {
   return (
     <Section
       id="who"
-      eyebrow="Who we are"
+      eyebrow="About us"
       title="Two founders. One director who knows how a show gets made, one engineer who builds the machines that make them."
     >
       <div className="grid gap-10 md:grid-cols-2 md:gap-12">
