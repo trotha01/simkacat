@@ -49,12 +49,8 @@ export const founders = [
     photo: null, // add a headshot (src/assets/trevor.webp) and import it here
     bio: [
       'Trevor builds systems that scale. At SendGrid he was a core developer through the years that took the company from a Series C startup to a multi-billion-dollar public company and its acquisition by Twilio, working on infrastructure that delivered email for tens of thousands of customers.',
-      'He applies the same engineering to media: the AI video pipeline, the inference stack and the three 24/7 channels behind Simka Cat all run unattended, so the studio can take on work at a volume and price a traditional shop cannot.',
     ],
-    links: [
-      { label: 'Claritas Studios', url: 'https://claritasstudios.com/' },
-      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/trevorrothaus/' },
-    ],
+    links: [],
   },
 ]
 
