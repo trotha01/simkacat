@@ -1,1 +1,1 @@
-{"state":"waiting","msg":"needs_you: PR https://github.com/trotha01/simkacat/pull/9 open; review bios/credits TODOs and approve live deploy. Not deployed to production."}
+{"state":"waiting","msg":"needs_you: PR https://github.com/trotha01/simkacat/pull/9 updated (TODOs removed, Trevor bio = scale/SendGrid, original fonts). Approve merge + live deploy."}

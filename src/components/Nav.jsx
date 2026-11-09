@@ -9,7 +9,7 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
         <a href="#top" className="flex items-center gap-3 no-underline">
           <img src={logo} alt="" width={1424} height={801} className="h-9 w-auto" />
-          <span className="font-fredoka text-lg font-bold text-ink">Simka Cat</span>
+          <span className="font-luckiest text-lg uppercase text-ink">Simka Cat</span>
         </a>
         <ul className="hidden items-center gap-6 md:flex">
           {nav.map((n) => (

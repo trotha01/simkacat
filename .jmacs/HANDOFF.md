@@ -11,9 +11,12 @@ PR only; no production deploy until Trevor approves.
 - Credits sourced from TMDB, IMDb search listings, claritasstudios.com; unverified roles marked TODO(Trevor).
 - Screenshots in docs/screenshots/. PR opened: https://github.com/trotha01/simkacat/pull/9
 
+## Done (round 2, per Trevor)
+- All TODO placeholders removed; Trevor has no film credits (Credits is Mychal only, verified roles only);
+  Trevor's bio centres on scale and SendGrid; original site fonts restored (Luckiest Guy, Caveat, Fredoka, Nunito, Gochi).
+
 ## Pending (needs Trevor)
-- Review bios and credits; confirm or delete every TODO(Trevor) in src/data/content.js (headshots, Lionsgate claim,
-  four IMDb roles, contact email, further Trevor titles).
+- Final read of bios/credits; add headshots if wanted (founders[].photo).
 - Supply real showcase clips (public/showcase/, set `media`), esp. the Chinese→English lip-sync demo.
 - Swap in the DeepInfer 5-line pitch once reports/deepinfer-business-model.org is merged in knowledge-base-lab.
 - Approve merge + live deploy. Preview URL: Netlify deploy preview should appear on the PR if enabled (site name

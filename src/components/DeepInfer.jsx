@@ -1,5 +1,4 @@
 import Section from './Section'
-import Todo from './Todo'
 import { deepinfer, siteMeta } from '../data/content'
 
 export default function DeepInfer() {
@@ -12,9 +11,6 @@ export default function DeepInfer() {
               {p}
             </p>
           ))}
-          <div className="mt-4">
-            <Todo>swap in the 5-line pitch from reports/deepinfer-business-model.org when merged</Todo>
-          </div>
         </div>
         <div className="rounded-2xl border-2 border-ink bg-cream p-6 shadow-[6px_6px_0_#1c1c1c]">
           <div className="font-mono text-[11px] uppercase tracking-wider text-ink/60">Status</div>

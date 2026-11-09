@@ -8,10 +8,11 @@ export default function Hero() {
       <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-pink/40 blur-3xl" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <h1 className="font-fredoka text-[clamp(38px,6vw,72px)] font-bold leading-[1] text-ink">
+          <div className="font-caveat text-[clamp(22px,2.6vw,32px)] font-bold text-[#b53406]">Simka Cat Productions</div>
+          <h1 className="mt-2 font-luckiest text-[clamp(38px,6vw,78px)] uppercase leading-[0.9] text-ink">
             Stories, made and <span className="text-[#e8460b]">re-made</span> for any audience.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/80 md:text-xl">{siteMeta.tagline}</p>
+          <p className="mt-6 max-w-xl font-fredoka text-lg font-medium leading-relaxed text-ink/80 md:text-xl">{siteMeta.tagline}</p>
           <p className="mt-3 max-w-xl text-base leading-relaxed text-ink/70">
             Production, publicity and celebrity access, AI video that swaps backgrounds, performers and languages,
             and 24/7 AI channels you can watch right now.
@@ -19,7 +20,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#showcase"
-              className="rounded-full bg-orange px-6 py-3 font-fredoka font-semibold text-white no-underline shadow-[0_6px_0_#1c1c1c] hover:translate-y-0.5 hover:shadow-[0_4px_0_#1c1c1c]"
+              className="rounded-full bg-orange px-6 py-3 font-luckiest uppercase tracking-wide text-white no-underline shadow-[0_6px_0_#1c1c1c] hover:translate-y-0.5 hover:shadow-[0_4px_0_#1c1c1c]"
             >
               See the showcase
             </a>

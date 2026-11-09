@@ -17,7 +17,7 @@ export default function Services() {
               i === 1 ? 'bg-slime' : i === 2 ? 'bg-pink/70' : 'bg-white'
             }`}
           >
-            <h3 className="font-fredoka text-xl font-bold">{s.name}</h3>
+            <h3 className="font-luckiest text-xl uppercase leading-tight">{s.name}</h3>
             <p className="mt-3 leading-relaxed text-ink/80">{s.blurb}</p>
           </article>
         ))}

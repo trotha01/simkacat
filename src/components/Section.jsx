@@ -15,10 +15,10 @@ export default function Section({ id, eyebrow, title, intro, tone = 'light', chi
       <div className="mx-auto max-w-6xl">
         <header className="max-w-3xl">
           {eyebrow && (
-            <div className={`font-fredoka text-sm font-semibold uppercase tracking-[0.2em] ${eyebrowTone}`}>{eyebrow}</div>
+            <div className={`font-caveat text-[clamp(22px,2.4vw,30px)] font-bold ${eyebrowTone}`}>{eyebrow}</div>
           )}
-          <h2 className="mt-2 font-fredoka text-[clamp(30px,4.5vw,52px)] font-bold leading-[1.05]">{title}</h2>
-          {intro && <p className={`mt-4 text-lg leading-relaxed ${introTone}`}>{intro}</p>}
+          <h2 className="mt-1 font-luckiest text-[clamp(30px,4.5vw,56px)] uppercase leading-[0.95]">{title}</h2>
+          {intro && <p className={`mt-5 font-fredoka text-[clamp(17px,1.6vw,21px)] font-medium leading-[1.4] ${introTone}`}>{intro}</p>}
         </header>
         <div className="mt-10 md:mt-14">{children}</div>
       </div>

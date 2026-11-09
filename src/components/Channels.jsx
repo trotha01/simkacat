@@ -26,7 +26,7 @@ export default function Channels() {
               </span>
               <span className="font-mono text-[11px] uppercase tracking-wider text-ink/60">live · AI-generated</span>
             </div>
-            <h3 className="mt-3 font-fredoka text-2xl font-bold">{c.name}</h3>
+            <h3 className="mt-3 font-luckiest text-2xl uppercase">{c.name}</h3>
             <p className="mt-2 flex-1 leading-relaxed text-ink/80">{c.desc}</p>
             <span className="mt-4 font-semibold underline group-hover:text-[#b53406]">Watch →</span>
           </a>

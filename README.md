@@ -2,7 +2,7 @@
 
 Studio site for Simka Cat Productions (Trevor Rothaus and Mychal Simka), built with React, Vite, and Tailwind CSS.
 
-All copy lives in `src/data/content.js`. Items marked `TODO(Trevor)` render as visible placeholders (the `Todo` component) until filled in; real showcase clips go in `public/showcase/` and are referenced from the `showcase` list.
+All copy lives in `src/data/content.js`. Real showcase clips go in `public/showcase/` and are referenced from the `showcase` list.
 
 ## Development
 

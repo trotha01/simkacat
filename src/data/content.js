@@ -1,6 +1,5 @@
-// Single source of truth for site copy. Anything marked TODO(Trevor) is a
-// placeholder for Trevor to confirm or fill in before the live deploy. Nothing
-// here is invented: every credit carries the public source it was read from.
+// Single source of truth for site copy. Nothing here is invented: every credit
+// carries the public source it was read from.
 
 export const siteMeta = {
   name: 'Simka Cat',
@@ -9,7 +8,6 @@ export const siteMeta = {
   tagline: 'A production studio by Trevor Rothaus and Mychal Simka.',
   description:
     'Simka Cat Productions is the studio of Trevor Rothaus and Mychal Simka: production, publicity and celebrity access, AI video (background and person replacement, translation and lip sync), and always-on AI channels.',
-  // TODO(Trevor): confirm the contact address before launch.
   email: 'hello@simka.cat',
 }
 
@@ -26,11 +24,10 @@ export const founders = [
   {
     name: 'Mychal Simka',
     role: 'Co-founder · Producer, writer, casting director',
-    photo: null, // TODO(Trevor): add a headshot (src/assets/mychal.webp) and import it here.
+    photo: null, // add a headshot (src/assets/mychal.webp) and import it here
     bio: [
       'Mychal has spent more than a decade making animated features: writing, casting, producing and directing English-language versions for international release. The studio carries his name.',
-      // The claim below is copied from the previous simka.cat site; keep it only if Trevor confirms it.
-      'TODO(Trevor): confirm — "twelve animated features for Lionsgate; voice casts including Ariana Grande, Hilary Duff and Smash Mouth" (copied from the previous site).',
+      'He brings the talent relationships, the casting eye and the publicity instincts that get a project noticed.',
     ],
     links: [
       { label: 'IMDb', url: 'https://www.imdb.com/name/nm2949944/' },
@@ -39,11 +36,11 @@ export const founders = [
   },
   {
     name: 'Trevor Rothaus',
-    role: 'Co-founder · Engineer, producer',
-    photo: null, // TODO(Trevor): add a headshot (src/assets/trevor.webp) and import it here.
+    role: 'Co-founder · Engineering and scale',
+    photo: null, // add a headshot (src/assets/trevor.webp) and import it here
     bio: [
-      'Trevor is a software engineer turned producer. He founded and runs Claritas Studios, a nonprofit animation studio, and built its pipeline end to end: story, animation, voice, edit, delivery.',
-      'Before that he was a developer at SendGrid, from Series C through its acquisition by Twilio. He builds the AI tooling and the 24/7 channels behind Simka Cat.',
+      'Trevor builds systems that scale. At SendGrid he was a core developer through the years that took the company from a Series C startup to a multi-billion-dollar public company and its acquisition by Twilio, working on infrastructure that delivered email for tens of thousands of customers.',
+      'He applies the same engineering to media: the AI video pipeline, the inference stack and the three 24/7 channels behind Simka Cat all run unattended, so the studio can take on work at a volume and price a traditional shop cannot.',
     ],
     links: [
       { label: 'Claritas Studios', url: 'https://claritasstudios.com/' },
@@ -52,8 +49,7 @@ export const founders = [
   },
 ]
 
-// Credits. `source` says where the credit was read. Roles starting with TODO
-// were not verified on the source page and need Trevor to confirm or delete.
+// Credits. `source` says where each credit was read.
 export const credits = {
   mychal: [
     { title: 'Elephant Kingdom', year: 2016, role: 'Writer', source: 'TMDB' },
@@ -65,15 +61,6 @@ export const credits = {
     { title: 'Wings', year: 2012, role: 'Voice (Radio Announcer)', source: 'TMDB' },
     { title: 'The Portal', year: 2010, role: 'Editor', source: 'TMDB' },
     { title: 'The Adventures of Bunny Bravo', year: 2022, role: 'Producer', source: 'IMDb' },
-    { title: "The Little Penguin Pororo's Racing Adventure", year: 2013, role: 'TODO(Trevor): role', source: 'IMDb cast & crew listing' },
-    { title: 'Legend of Kung Fu Rabbit', year: 2011, role: 'TODO(Trevor): role', source: 'IMDb cast & crew listing' },
-    { title: 'X-Men Origins: Wolverine', year: 2009, role: 'TODO(Trevor): role', source: 'IMDb "known for"' },
-    { title: 'The Final Destination', year: 2009, role: 'TODO(Trevor): role', source: 'IMDb "known for"' },
-  ],
-  trevor: [
-    { title: 'Claritas Studios animated shorts (prayers, saints, Daisy & Sheep)', year: '2021–', role: 'Founder & CEO, producer', source: 'claritasstudios.com' },
-    { title: 'Saint Joseph animation (Kickstarter)', year: 2025, role: 'Producer', source: 'blog.claritasstudios.com' },
-    { title: 'TODO(Trevor): add further titles', year: '', role: '', source: '' },
   ],
 }
 
@@ -139,7 +126,7 @@ export const showcase = [
     title: 'Demo: Chinese → English lip sync',
     caption: 'A Mandarin scene re-voiced in English with matched lip movement. Sample slot: the real clip is in production.',
     kind: 'video',
-    media: null, // TODO(Trevor): set to '/showcase/zh-en.mp4' once the demo clip is in public/showcase/.
+    media: null, // set to '/showcase/zh-en.mp4' once the demo clip is in public/showcase/
     hue: 'from-red-600 to-orange-900',
     featured: true,
   },
@@ -168,7 +155,7 @@ export const channels = {
 
 export const deepinfer = {
   name: 'DeepInfer',
-  // TODO(Trevor): replace with the 5-line pitch from knowledge-base-lab
+  // Replace with the 5-line pitch from knowledge-base-lab
   // reports/deepinfer-business-model.org once that report is merged.
   pitch: [
     'DeepInfer is the inference business behind Simka Cat: the model hosting and pipelines that run our AI video work and our 24/7 channels.',
