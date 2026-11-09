@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import { nav, siteMeta } from '../data/content'
+import { PhotoCreditsModal } from './PhotoCredits'
 
 export default function Footer() {
+  const [credits, setCredits] = useState(false)
   return (
     <footer className="bg-ink px-5 py-12 text-cream sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
@@ -23,7 +26,15 @@ export default function Footer() {
       </div>
       <div className="mx-auto mt-10 max-w-6xl border-t border-cream/15 pt-6 font-gochi text-base text-cream/60">
         © {new Date().getFullYear()} {siteMeta.legalName}. AI-generated media on this site and our channels is labelled as such.
+        <button
+          type="button"
+          onClick={() => setCredits(true)}
+          className="ml-3 font-nunito text-[11px] text-cream/40 underline hover:text-cream/80"
+        >
+          Photo credits
+        </button>
       </div>
+      {credits && <PhotoCreditsModal onClose={() => setCredits(false)} />}
     </footer>
   )
 }
