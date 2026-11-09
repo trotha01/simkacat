@@ -32,6 +32,14 @@ PR only; no production deploy until Trevor approves.
 - Credits: Trevor's verbatim 12-film list with roles line, 12 posters (supervisor's Drive files, converted to <=600px webp),
   'Top actors Mychal has worked with' grid of 30 names verbatim. TMDB/IMDb sentence, per-title source labels and links removed.
 
+## Verified on the Netlify deploy preview (https://deploy-preview-9--simkacat.netlify.app, commit dee43ef)
+- curl of the served bundle: no 'AI concept still', no TMDB/IMDb text; roles line; all 12 titles; heading + 30 actor names;
+  three stream URLs + /healthz; bios; 'Publicity & celebrity access'; showcase tiles incl. 'Chinese → English lip sync';
+  'Always on, always labelled' + 'Want your own channel?' + ai-247 link; 'DeepInfer' + 'For investors'.
+- 12 poster assets and 6 showcase stills return 200.
+- Headless browser: 12 posters rendered (0 broken), 30 actor tiles, 0 labels, 0 source labels, 6 showcase images loaded,
+  AI News video playing (readyState 4, not paused), Puddle Park tab 'off air', 0 console errors.
+
 ## Pending (needs Trevor)
 - Final read of bios/credits; add headshots if wanted (founders[].photo).
 - Supply moving demos when ready (add `video:` to a showcase tile), esp. the Chinese→English lip-sync clip.
