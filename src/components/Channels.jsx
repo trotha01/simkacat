@@ -3,6 +3,10 @@ import Section from './Section'
 import LivePlayer from './LivePlayer'
 import { channels, siteMeta } from '../data/content'
 
+// Static previews (the claude.ai artifact) cannot reach the stream Workers, so
+// they show a "Watch live" card per channel instead of the player.
+const STATIC_PREVIEW = import.meta.env.VITE_STATIC_PREVIEW === '1'
+
 // The player and the health checks only start once the section scrolls into
 // view, so the rest of the homepage is not slowed down by three live streams.
 export default function Channels() {
@@ -38,8 +42,10 @@ export default function Channels() {
     channels.list.forEach((c) => {
       fetch(c.health, { cache: 'no-store', signal: ctrl.signal })
         .then((r) => r.json())
-        .then((d) => setHealth((h) => ({ ...h, [c.id]: d && d.ok ? 'ok' : 'off' })))
-        .catch(() => setHealth((h) => ({ ...h, [c.id]: 'off' })))
+        // Only an explicit { ok: false } means off air. If the health check itself
+        // cannot be reached (network, sandbox), assume on air and let the player try.
+        .then((d) => setHealth((h) => ({ ...h, [c.id]: d && d.ok === false ? 'off' : 'ok' })))
+        .catch(() => setHealth((h) => ({ ...h, [c.id]: 'ok' })))
     })
     return () => ctrl.abort()
   }, [visible])
@@ -54,6 +60,7 @@ export default function Channels() {
   }, [health, active])
 
   const current = channels.list.find((c) => c.id === active)
+  const tabState = (c) => (STATIC_PREVIEW ? (c.still ? 'ok' : 'off') : health[c.id])
 
   return (
     <div ref={sectionRef}>
@@ -67,7 +74,7 @@ export default function Channels() {
         <div className="overflow-hidden rounded-2xl border-2 border-ink bg-ink shadow-[8px_8px_0_#1c1c1c]">
           <div role="tablist" aria-label="Channel" className="flex flex-wrap gap-1 border-b border-cream/15 bg-ink p-2">
             {channels.list.map((c) => {
-              const state = health[c.id]
+              const state = tabState(c)
               const selected = c.id === active
               return (
                 <button
@@ -97,7 +104,9 @@ export default function Channels() {
               AI-generated
             </span>
           </div>
-          {visible ? (
+          {STATIC_PREVIEW ? (
+            <WatchLiveCard channel={current} />
+          ) : visible ? (
             <LivePlayer channel={current} health={health[active]} />
           ) : (
             <div className="aspect-video w-full bg-ink" />
@@ -131,5 +140,31 @@ export default function Channels() {
         </div>
       </Section>
     </div>
+  )
+}
+
+function WatchLiveCard({ channel }) {
+  const href = `${channels.url}#${channel.id}`
+  if (!channel.still) {
+    return (
+      <div className="relative flex aspect-video w-full flex-col items-center justify-center gap-3 bg-ink p-6 text-center text-cream">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(246,140,177,0.18),transparent_60%)]" />
+        <div className="relative font-luckiest text-[clamp(26px,4vw,44px)] uppercase leading-none">Off air</div>
+        <p className="relative max-w-sm text-cream/75">{channel.name} is between broadcasts. The schedule is on ai-247.</p>
+      </div>
+    )
+  }
+  return (
+    <a href={href} target="_blank" rel="noreferrer" className="group relative block aspect-video w-full bg-black no-underline">
+      <img src={channel.still} alt={`${channel.name}, recent frame`} className="h-full w-full object-cover opacity-90 group-hover:opacity-100" />
+      <span className="absolute inset-0 flex items-end justify-start p-4">
+        <span className="rounded-full border-2 border-ink bg-slime px-4 py-2 font-luckiest text-sm uppercase tracking-wide text-ink shadow-[4px_4px_0_#1c1c1c]">
+          ▶ Watch live on ai-247
+        </span>
+      </span>
+      <span className="absolute right-4 top-4 rounded border border-cream/40 bg-ink/70 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream">
+        Live stream opens in a new tab
+      </span>
+    </a>
   )
 }

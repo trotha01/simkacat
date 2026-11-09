@@ -167,6 +167,7 @@ export const channels = {
       desc: 'Short news bulletins written and voiced by AI from public primary-source feeds, each one citing its sources.',
       stream: 'https://ai247-live.trotha01.workers.dev/live.m3u8',
       health: 'https://ai247-live.trotha01.workers.dev/healthz',
+      still: '/channels/ai247.webp',
     },
     {
       id: 'lang',
@@ -174,6 +175,7 @@ export const channels = {
       desc: 'Latin, Greek and Hebrew one verse at a time: a word-by-word gloss, read slowly, then at normal speed, then in English.',
       stream: 'https://lang-live.trotha01.workers.dev/live.m3u8',
       health: 'https://lang-live.trotha01.workers.dev/healthz',
+      still: '/channels/lang.webp',
     },
     {
       id: 'puddle',
