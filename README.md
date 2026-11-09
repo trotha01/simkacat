@@ -1,6 +1,8 @@
 # Simka Cat
 
-Marketing site for Simka Cat Productions, built with React, Vite, and Tailwind CSS.
+Studio site for Simka Cat Productions (Trevor Rothaus and Mychal Simka), built with React, Vite, and Tailwind CSS.
+
+All copy lives in `src/data/content.js`. Items marked `TODO(Trevor)` render as visible placeholders (the `Todo` component) until filled in; real showcase clips go in `public/showcase/` and are referenced from the `showcase` list.
 
 ## Development
 
@@ -23,7 +25,7 @@ npm run lint
 
 ## Project structure
 
-- `src/components` — one component per page section (Hero, Backstory, Crew, PullQuote, TripleThreat, FoodMerch, FooterCta)
-- `src/data/content.js` — copy and content data for the food/shows/crew sections
+- `src/components` — one component per page section (Nav, Hero, WhoWeAre, Credits, Services, Showcase, Channels, DeepInfer, Footer)
+- `src/data/content.js` — all copy, credits (with sources), services, showcase tiles, channel list
 - `src/assets` — images
 - `src/fonts` — self-hosted webfonts (Caveat, Fredoka, Gochi Hand, Luckiest Guy, Nunito)

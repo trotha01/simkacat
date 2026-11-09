@@ -1,40 +1,47 @@
-import heroCoverGirl from '../assets/hero-cover-girl.webp'
-import simkaCatLogo from '../assets/simkacat-sparkle-logo.png'
+import logo from '../assets/simkacat-sparkle-logo.png'
+import { siteMeta } from '../data/content'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b-0 bg-white md:min-h-[74vh]">
-      <img
-        src={simkaCatLogo}
-        alt="Simka Cat"
-        width={1424}
-        height={801}
-        loading="eager"
-        fetchpriority="high"
-        className="absolute -top-[4vw] -left-[6vw] w-[80vw] max-w-[420px] h-auto rotate-[350deg] md:top-[-4%] md:left-[-5%] md:w-[min(58%,700px)] md:max-w-none"
-      />
-
-      <div className="flex flex-col gap-4 px-[6%] pt-6 md:absolute md:inset-0 md:mx-auto md:max-w-[1400px]">
-        <div className="pt-[44vw] md:pt-0" />
-        <h1 className="sr-only">Simka Cat</h1>
-
-        <div className="font-caveat text-[#2b2b2b] md:absolute md:top-[9%] md:right-[5%] md:w-[min(38%,430px)]">
-          <div className="text-[clamp(26px,3.4vw,44px)] font-bold leading-none">Why Simka&nbsp;Cat?</div>
-          <p className="mt-3.5 text-[clamp(19px,2vw,26px)] leading-[1.25]">
-            The shows we grew up on had real arcs, real stakes, real characters. We&apos;re bringing all that back:
-            chaos and slime on the surface, but a real story underneath.
+    <section id="top" className="relative overflow-hidden bg-white px-5 pb-16 pt-12 sm:px-8 md:pb-24 md:pt-20">
+      <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-slime/50 blur-3xl md:h-96 md:w-96" />
+      <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-pink/40 blur-3xl" />
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <h1 className="font-fredoka text-[clamp(38px,6vw,72px)] font-bold leading-[1] text-ink">
+            Stories, made and <span className="text-[#e8460b]">re-made</span> for any audience.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/80 md:text-xl">{siteMeta.tagline}</p>
+          <p className="mt-3 max-w-xl text-base leading-relaxed text-ink/70">
+            Production, publicity and celebrity access, AI video that swaps backgrounds, performers and languages,
+            and 24/7 AI channels you can watch right now.
           </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#showcase"
+              className="rounded-full bg-orange px-6 py-3 font-fredoka font-semibold text-white no-underline shadow-[0_6px_0_#1c1c1c] hover:translate-y-0.5 hover:shadow-[0_4px_0_#1c1c1c]"
+            >
+              See the showcase
+            </a>
+            <a
+              href="#services"
+              className="rounded-full border-2 border-ink px-6 py-3 font-fredoka font-semibold text-ink no-underline hover:bg-ink hover:text-cream"
+            >
+              What we do
+            </a>
+          </div>
         </div>
-
-        <img
-          src={heroCoverGirl}
-          alt="Simka Cat cover girl in mod stripes"
-          width={1024}
-          height={1024}
-          loading="eager"
-          fetchpriority="high"
-          className="pointer-events-none mx-auto w-full max-w-[240px] h-auto rotate-3 mix-blend-multiply md:absolute md:right-[2%] md:-bottom-[6%] md:mx-0 md:w-[min(42%,360px)] md:max-w-none"
-        />
+        <div className="flex justify-center md:justify-end">
+          <img
+            src={logo}
+            alt="Simka Cat"
+            width={1424}
+            height={801}
+            loading="eager"
+            fetchpriority="high"
+            className="w-full max-w-[320px] -rotate-6 drop-shadow-xl md:max-w-[460px]"
+          />
+        </div>
       </div>
     </section>
   )
