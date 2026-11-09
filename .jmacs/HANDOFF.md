@@ -52,3 +52,10 @@ PR only; no production deploy until Trevor approves.
 
 ## Next step
 - Trevor reviews PR #9; on OK, merge (Netlify deploys main to simka.cat).
+
+## Round 7 (local worker simka-finish, 2026-11-09)
+- Re-verified all of Trevor's items in src and in the served preview bundle (commit dee43ef): no badges, no TMDB/IMDb
+  text, verbatim 12-film list + roles line, 12 posters, 30-name actors grid, hls.js player (AI News playing, Puddle Park off air).
+- Artifact https://claude.ai/artifact/SQYU9GqcwM5b6pyhyutNNM republished from this branch (vite --base=./, showcase paths
+  made relative). Live streams cannot play inside the artifact sandbox (all tabs show off air there); use the Netlify preview for channels.
+- Status: needs_you. Trevor confirms, then merge (no production deploy from this task).
