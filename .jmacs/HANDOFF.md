@@ -15,9 +15,13 @@ PR only; no production deploy until Trevor approves.
 - All TODO placeholders removed; Trevor has no film credits (Credits is Mychal only, verified roles only);
   Trevor's bio centres on scale and SendGrid; original site fonts restored (Luckiest Guy, Caveat, Fredoka, Nunito, Gochi).
 
+## Done (round 3)
+- Showcase now uses six AI-generated concept stills (Higgsfield gpt_image_2_6, ~1.5 credits total) in public/showcase/:
+  parking deck → Mediterranean quay, diner recast, Mandarin original → English dub. Labelled "AI concept still".
+
 ## Pending (needs Trevor)
 - Final read of bios/credits; add headshots if wanted (founders[].photo).
-- Supply real showcase clips (public/showcase/, set `media`), esp. the Chinese→English lip-sync demo.
+- Supply moving demos when ready (add `video:` to a showcase tile), esp. the Chinese→English lip-sync clip.
 - Swap in the DeepInfer 5-line pitch once reports/deepinfer-business-model.org is merged in knowledge-base-lab.
 - Approve merge + live deploy. Preview URL: Netlify deploy preview should appear on the PR if enabled (site name
   unknown from this session).

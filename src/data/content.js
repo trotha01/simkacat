@@ -91,43 +91,47 @@ export const services = [
   },
 ]
 
-// Showcase tiles. `media` is null until a real demo exists: the tile then renders
-// a clearly labelled sample placeholder (see Showcase.jsx). Put real clips in
-// public/showcase/ and set media to the path, e.g. '/showcase/zh-en.mp4'.
+// Showcase tiles. Stills are AI-generated concept frames in public/showcase/.
+// When a moving demo exists, add `video: '/showcase/<name>.mp4'` (and an
+// optional `poster`) to the tile and it replaces the still.
 export const showcase = [
   {
     id: 'background',
     title: 'Background replacement',
-    caption: 'Shoot anywhere, set it anywhere. The subject stays; the world behind them changes.',
+    caption:
+      'Shot on a Burbank parking deck, delivered on a Mediterranean quay. Same actress, same take, same light: the location is the only thing that changed. Pickups and inserts without travel, permits or a second unit.',
     kind: 'before-after',
-    media: null,
-    before: { label: 'Before', hue: 'from-stone-700 to-stone-900' },
-    after: { label: 'After', hue: 'from-sky-500 to-indigo-700' },
+    before: { src: '/showcase/bg-before.webp', label: 'As shot', alt: 'Woman in a trench coat on the phone on an empty parking deck' },
+    after: { src: '/showcase/bg-after.webp', label: 'Delivered', alt: 'The same woman, same pose, now on a harbour quay at golden hour' },
   },
   {
     id: 'person',
     title: 'Person replacement',
-    caption: 'Recast a finished scene. Same blocking, same light, a different performer.',
+    caption:
+      'Recast a finished scene for a territory, or replace a performer who is no longer available. Blocking, wardrobe, lighting and the other actor stay locked; only the face and body change.',
     kind: 'before-after',
-    media: null,
-    before: { label: 'Original', hue: 'from-amber-700 to-stone-900' },
-    after: { label: 'Recast', hue: 'from-rose-500 to-fuchsia-800' },
+    before: { src: '/showcase/person-before.webp', label: 'Original cast', alt: 'Two actors talking in a diner booth at night' },
+    after: { src: '/showcase/person-after.webp', label: 'Recast', alt: 'The same diner scene with a different actor on the left' },
   },
   {
     id: 'lipsync',
     title: 'Translation & lip sync',
-    caption: 'Translate the dialogue, re-voice it, and match the mouth to the new language.',
-    kind: 'video',
-    media: null,
-    hue: 'from-emerald-600 to-teal-900',
+    caption:
+      'Dub a finished film into a new language and match the mouth to the new line, so the dubbed version plays like an original. Subtitled territories become dubbed territories at a fraction of ADR cost.',
+    kind: 'single',
+    src: '/showcase/lipsync.webp',
+    label: 'Original: Mandarin',
+    alt: 'Close-up of an actress in period costume mid-line with a Chinese subtitle',
   },
   {
     id: 'zh-en',
-    title: 'Demo: Chinese → English lip sync',
-    caption: 'A Mandarin scene re-voiced in English with matched lip movement. Sample slot: the real clip is in production.',
-    kind: 'video',
-    media: null, // set to '/showcase/zh-en.mp4' once the demo clip is in public/showcase/
-    hue: 'from-red-600 to-orange-900',
+    title: 'Chinese → English lip sync',
+    caption:
+      'The same performance, re-voiced in English with the lips re-timed to the new dialogue. A 30-second moving demo on a licensed clip is in production for AFM.',
+    kind: 'single',
+    src: '/showcase/zh-en.webp',
+    label: 'Dubbed: English',
+    alt: 'The same close-up with the English line "I won\'t wait for you anymore" as the subtitle',
     featured: true,
   },
 ]
