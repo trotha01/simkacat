@@ -22,6 +22,12 @@ PR only; no production deploy until Trevor approves.
 ## Done (round 4, Trevor's feedback)
 - Removed every "AI concept still" badge; before/after frames now stack vertically at full width so no actor is cropped.
 
+## Done (round 5, Trevor's feedback)
+- Channels section embeds the live streams: one hls.js 1.6.15 player with channel tabs, lazy-loaded (IntersectionObserver +
+  dynamic import, separate chunk), muted autoplay with tap-to-unmute, /healthz check per channel, off-air card.
+- CORS on all three Workers is already `*` (healthz, playlist, preflight): no ai-247 change needed.
+- Puddle Park /healthz returns ok:false and its playlist 503s, so it shows off air.
+
 ## Pending (needs Trevor)
 - Final read of bios/credits; add headshots if wanted (founders[].photo).
 - Supply moving demos when ready (add `video:` to a showcase tile), esp. the Chinese→English lip-sync clip.

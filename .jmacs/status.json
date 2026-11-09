@@ -1,1 +1,1 @@
-{"state":"waiting","msg":"needs_you: PR https://github.com/trotha01/simkacat/pull/9 updated per feedback (badges removed, before/after stacked uncropped). Approve merge + live deploy."}
+{"state":"waiting","msg":"needs_you: PR https://github.com/trotha01/simkacat/pull/9 now embeds the live channels (hls.js, lazy, off-air card; Workers CORS already open). Approve merge + live deploy."}

@@ -138,21 +138,28 @@ export const showcase = [
 
 export const channels = {
   url: 'https://ai-247.pages.dev/',
+  // stream = the channel Worker's HLS playlist; health = its /healthz ({ ok: boolean }).
   list: [
     {
       id: 'ai247',
       name: 'AI News',
       desc: 'Short news bulletins written and voiced by AI from public primary-source feeds, each one citing its sources.',
+      stream: 'https://ai247-live.trotha01.workers.dev/live.m3u8',
+      health: 'https://ai247-live.trotha01.workers.dev/healthz',
     },
     {
       id: 'lang',
       name: 'Lingua',
       desc: 'Latin, Greek and Hebrew one verse at a time: a word-by-word gloss, read slowly, then at normal speed, then in English.',
+      stream: 'https://lang-live.trotha01.workers.dev/live.m3u8',
+      health: 'https://lang-live.trotha01.workers.dev/healthz',
     },
     {
       id: 'puddle',
       name: 'Puddle Park',
       desc: 'Felt puppets in a park, with scenes written, voiced and animated by AI as they air.',
+      stream: 'https://puddle-live.trotha01.workers.dev/live.m3u8',
+      health: 'https://puddle-live.trotha01.workers.dev/healthz',
     },
   ],
 }
