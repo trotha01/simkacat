@@ -164,6 +164,15 @@ export const channels = {
   // stream = the channel Worker's HLS playlist; health = its /healthz ({ ok: boolean }).
   list: [
     {
+      id: 'puddle',
+      name: 'Puddle Park',
+      desc: 'Felt puppets in a park, with scenes written, voiced and animated by AI as they air.',
+      stream: 'https://aitv-live.mychalsimka.workers.dev/live.m3u8',
+      health: 'https://aitv-live.mychalsimka.workers.dev/healthz',
+      page: 'https://puddle-park.pages.dev/',
+      still: '/channels/puddle.webp',
+    },
+    {
       id: 'ai247',
       name: 'AI News',
       desc: 'Short news bulletins written and voiced by AI from public primary-source feeds, each one citing its sources.',
@@ -178,14 +187,6 @@ export const channels = {
       stream: 'https://lang-live.trotha01.workers.dev/live.m3u8',
       health: 'https://lang-live.trotha01.workers.dev/healthz',
       still: '/channels/lang.webp',
-    },
-    {
-      id: 'puddle',
-      name: 'Puddle Park',
-      desc: 'Felt puppets in a park, with scenes written, voiced and animated by AI as they air.',
-      stream: 'https://aitv-live.mychalsimka.workers.dev/live.m3u8',
-      health: 'https://aitv-live.mychalsimka.workers.dev/healthz',
-      page: 'https://puddle-park.pages.dev/',
     },
   ],
 }
