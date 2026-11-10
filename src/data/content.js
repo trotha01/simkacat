@@ -156,6 +156,11 @@ export const showcase = [
 
 export const channels = {
   url: 'https://ai-247.pages.dev/',
+  // Shown as a label on the section, the player and each channel while the channels are still being built.
+  // Set to '' to remove the label everywhere.
+  status: 'In progress',
+  intro:
+    'Three channels we are building and running ourselves: every clip is written, voiced and rendered by software as it airs, marked as AI-generated, and cites its sources. They are a work in progress, so expect rough edges and the odd gap. Watch them here, then ask us for one of your own.',
   // stream = the channel Worker's HLS playlist; health = its /healthz ({ ok: boolean }).
   list: [
     {
