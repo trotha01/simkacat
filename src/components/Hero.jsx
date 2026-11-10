@@ -20,7 +20,7 @@ export default function Hero() {
           <p className="mt-6 max-w-xl font-fredoka text-lg font-medium leading-relaxed text-ink/80 md:text-xl">{siteMeta.tagline}</p>
           <p className="mt-3 max-w-xl text-base leading-relaxed text-ink/70">
             Production, publicity and celebrity access, AI video that swaps backgrounds, performers and languages,
-            and 24/7 AI channels you can watch right now.
+            and 24/7 AI channels, now in progress.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
