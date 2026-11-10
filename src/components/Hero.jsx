@@ -8,7 +8,12 @@ export default function Hero() {
       <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-pink/40 blur-3xl" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <div className="font-caveat text-[clamp(22px,2.6vw,32px)] font-bold text-[#b53406]">Simka Cat Productions</div>
+          <div className="font-caveat text-[clamp(22px,2.6vw,32px)] font-bold text-[#b53406]">
+            {siteMeta.legalName}{' '}
+            <a href={siteMeta.imdb} target="_blank" rel="noreferrer" className="align-middle font-nunito text-sm font-semibold text-ink/70 underline hover:text-[#b53406]">
+              IMDb ↗
+            </a>
+          </div>
           <h1 className="mt-2 font-luckiest text-[clamp(38px,6vw,78px)] uppercase leading-[0.9] text-ink">
             Stories, made and <span className="text-[#e8460b]">re-made</span> for any audience.
           </h1>
@@ -35,7 +40,7 @@ export default function Hero() {
         <div className="flex justify-center md:justify-end">
           <img
             src={logo}
-            alt="Simka Cat"
+            alt="Simka Entertainment"
             width={1424}
             height={801}
             loading="eager"

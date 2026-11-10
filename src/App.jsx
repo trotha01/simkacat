@@ -14,12 +14,12 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
-        <WhoWeAre />
         <Credits />
         <Services />
         <Showcase />
         <Channels />
         <DeepInfer />
+        <WhoWeAre />
       </main>
       <Footer />
     </div>

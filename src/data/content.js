@@ -14,22 +14,23 @@ import posterWings2 from '../assets/posters/wings-sky-force-heroes-2014.webp'
 // Single source of truth for site copy.
 
 export const siteMeta = {
-  name: 'Simka Cat',
-  legalName: 'Simka Cat Productions',
+  name: 'Simka Entertainment',
+  legalName: 'Simka Entertainment',
+  imdb: 'https://www.imdb.com/company/co0426986/',
   url: 'https://simka.cat',
   tagline: 'A production studio by Mychal Simka and Trevor Rothaus.',
   description:
-    'Simka Cat Productions is the studio of Mychal Simka and Trevor Rothaus: production, publicity and celebrity access, AI video (background and person replacement, translation and lip sync), and always-on AI channels.',
+    'Simka Entertainment is the studio of Mychal Simka and Trevor Rothaus: production, publicity and celebrity access, AI video (background and person replacement, translation and lip sync), and always-on AI channels.',
   email: 'mychal@simka.cat',
 }
 
 export const nav = [
-  { href: '#who', label: 'Who we are' },
   { href: '#credits', label: 'Credits' },
   { href: '#services', label: 'Services' },
   { href: '#showcase', label: 'Showcase' },
   { href: '#channels', label: 'Channels' },
   { href: '#deepinfer', label: 'DeepInfer' },
+  { href: '#who', label: 'About us' },
 ]
 
 export const founders = [
@@ -177,8 +178,9 @@ export const channels = {
       id: 'puddle',
       name: 'Puddle Park',
       desc: 'Felt puppets in a park, with scenes written, voiced and animated by AI as they air.',
-      stream: 'https://puddle-live.trotha01.workers.dev/live.m3u8',
-      health: 'https://puddle-live.trotha01.workers.dev/healthz',
+      stream: 'https://aitv-live.mychalsimka.workers.dev/live.m3u8',
+      health: 'https://aitv-live.mychalsimka.workers.dev/healthz',
+      page: 'https://puddle-park.pages.dev/',
     },
   ],
 }
@@ -188,7 +190,7 @@ export const deepinfer = {
   // Replace with the 5-line pitch from knowledge-base-lab
   // reports/deepinfer-business-model.org once that report is merged.
   pitch: [
-    'DeepInfer is the inference business behind Simka Cat: the model hosting and pipelines that run our AI video work and our 24/7 channels.',
+    'DeepInfer is the inference business behind Simka Entertainment: the model hosting and pipelines that run our AI video work and our 24/7 channels.',
     'We are writing up the business model now. Investors who want the full report early can ask for it below.',
   ],
   status: 'Business model report in progress',

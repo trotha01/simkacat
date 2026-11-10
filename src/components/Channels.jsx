@@ -116,12 +116,12 @@ export default function Channels() {
               <strong className="font-fredoka">{current.name}.</strong> {current.desc}
             </p>
             <a
-              href={`${channels.url}#${current.id}`}
+              href={current.page || `${channels.url}#${current.id}`}
               target="_blank"
               rel="noreferrer"
               className="shrink-0 font-semibold underline"
             >
-              Open on ai-247 →
+              {current.page ? `Open ${current.name} →` : 'Open on ai-247 →'}
             </a>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function Channels() {
 }
 
 function WatchLiveCard({ channel }) {
-  const href = `${channels.url}#${channel.id}`
+  const href = channel.page || `${channels.url}#${channel.id}`
   if (!channel.still) {
     return (
       <div className="relative flex aspect-video w-full flex-col items-center justify-center gap-3 bg-ink p-6 text-center text-cream">
