@@ -4,6 +4,16 @@ import PropTypes from 'prop-types'
 // One HLS player for the active channel. hls.js is loaded on demand (dynamic
 // import) the first time a channel that is on air is shown, so the homepage
 // bundle stays small.
+// Red dot + LIVE, top left of the player, like other streaming players.
+export function LiveBadge() {
+  return (
+    <span className="pointer-events-none absolute left-4 top-4 flex items-center gap-1.5 rounded bg-ink/70 px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-cream">
+      <span className="h-2 w-2 rounded-full bg-[#e8460b] animate-pulse" />
+      Live
+    </span>
+  )
+}
+
 export default function LivePlayer({ channel, health }) {
   const videoRef = useRef(null)
   const [muted, setMuted] = useState(true)
@@ -91,6 +101,7 @@ export default function LivePlayer({ channel, health }) {
         controls={!muted}
         aria-label={`${channel.name} live stream, AI-generated`}
       />
+      {!error && <LiveBadge />}
       {muted && !error && (
         <button
           type="button"

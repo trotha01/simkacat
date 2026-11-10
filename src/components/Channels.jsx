@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Section from './Section'
-import LivePlayer from './LivePlayer'
+import LivePlayer, { LiveBadge } from './LivePlayer'
 import { channels, siteMeta } from '../data/content'
 
 // Static previews (the claude.ai artifact) cannot reach the stream Workers, so
@@ -101,15 +101,8 @@ export default function Channels() {
                 </button>
               )
             })}
-            <span className="ml-auto flex items-center gap-2 self-center">
-              {channels.status && (
-                <span className="rounded border border-slime px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-slime">
-                  {channels.status}
-                </span>
-              )}
-              <span className="rounded border border-cream/30 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream/70">
-                AI-generated
-              </span>
+            <span className="ml-auto self-center rounded border border-cream/30 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream/70">
+              AI-generated
             </span>
           </div>
           {STATIC_PREVIEW ? (
@@ -122,11 +115,6 @@ export default function Channels() {
           <div className="flex flex-col gap-2 bg-cream p-5 text-ink sm:flex-row sm:items-start sm:justify-between">
             <p className="max-w-2xl leading-relaxed">
               <strong className="font-fredoka">{current.name}.</strong> {current.desc}
-              {channels.status && (
-                <span className="ml-2 inline-block rounded-full border border-ink/40 px-2 py-0.5 align-middle font-mono text-[10px] uppercase tracking-wider text-ink/70">
-                  {channels.status}
-                </span>
-              )}
             </p>
             <a
               href={current.page || `${channels.url}#${current.id}`}
@@ -175,8 +163,9 @@ function WatchLiveCard({ channel }) {
           ▶ Watch live on ai-247
         </span>
       </span>
+      <LiveBadge />
       <span className="absolute right-4 top-4 rounded border border-cream/40 bg-ink/70 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream">
-        {channels.status ? `${channels.status} · ` : ''}Live stream opens in a new tab
+        Opens in a new tab
       </span>
     </a>
   )
