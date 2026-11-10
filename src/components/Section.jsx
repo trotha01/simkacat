@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 // Shared section shell: consistent gutters, max width, heading rhythm.
-export default function Section({ id, eyebrow, title, intro, tone = 'light', children }) {
+export default function Section({ id, eyebrow, badge, title, intro, tone = 'light', children }) {
   const tones = {
     light: 'bg-cream text-ink',
     white: 'bg-white text-ink',
@@ -14,8 +14,17 @@ export default function Section({ id, eyebrow, title, intro, tone = 'light', chi
     <section id={id} className={`${tones[tone]} scroll-mt-20 px-5 py-16 sm:px-8 md:py-24`}>
       <div className="mx-auto max-w-6xl">
         <header className="max-w-3xl">
-          {eyebrow && (
-            <div className={`font-caveat text-[clamp(22px,2.4vw,30px)] font-bold ${eyebrowTone}`}>{eyebrow}</div>
+          {(eyebrow || badge) && (
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              {eyebrow && (
+                <div className={`font-caveat text-[clamp(22px,2.4vw,30px)] font-bold ${eyebrowTone}`}>{eyebrow}</div>
+              )}
+              {badge && (
+                <span className="rounded-full border-2 border-ink bg-slime px-3 py-1 font-luckiest text-sm uppercase tracking-wide text-ink shadow-[3px_3px_0_#1c1c1c]">
+                  {badge}
+                </span>
+              )}
+            </div>
           )}
           <h2 className="mt-1 font-luckiest text-[clamp(30px,4.5vw,56px)] uppercase leading-[0.95]">{title}</h2>
           {intro && <p className={`mt-5 font-fredoka text-[clamp(17px,1.6vw,21px)] font-medium leading-[1.4] ${introTone}`}>{intro}</p>}
@@ -29,6 +38,7 @@ export default function Section({ id, eyebrow, title, intro, tone = 'light', chi
 Section.propTypes = {
   id: PropTypes.string.isRequired,
   eyebrow: PropTypes.string,
+  badge: PropTypes.string,
   title: PropTypes.string.isRequired,
   intro: PropTypes.string,
   tone: PropTypes.oneOf(['light', 'white', 'dark', 'orange']),

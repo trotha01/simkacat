@@ -69,7 +69,8 @@ export default function Channels() {
         tone="orange"
         eyebrow="Our 24/7 AI channels"
         title="Always on, always labelled"
-        intro="Three channels we run ourselves: every clip is written, voiced and rendered by software as it airs, marked as AI-generated, and cites its sources. Watch them here, then ask us for one of your own."
+        badge={channels.status || undefined}
+        intro={channels.intro}
       >
         <div className="overflow-hidden rounded-2xl border-2 border-ink bg-ink shadow-[8px_8px_0_#1c1c1c]">
           <div role="tablist" aria-label="Channel" className="flex flex-wrap gap-1 border-b border-cream/15 bg-ink p-2">
@@ -100,8 +101,15 @@ export default function Channels() {
                 </button>
               )
             })}
-            <span className="ml-auto self-center rounded border border-cream/30 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream/70">
-              AI-generated
+            <span className="ml-auto flex items-center gap-2 self-center">
+              {channels.status && (
+                <span className="rounded border border-slime px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-slime">
+                  {channels.status}
+                </span>
+              )}
+              <span className="rounded border border-cream/30 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream/70">
+                AI-generated
+              </span>
             </span>
           </div>
           {STATIC_PREVIEW ? (
@@ -114,6 +122,11 @@ export default function Channels() {
           <div className="flex flex-col gap-2 bg-cream p-5 text-ink sm:flex-row sm:items-start sm:justify-between">
             <p className="max-w-2xl leading-relaxed">
               <strong className="font-fredoka">{current.name}.</strong> {current.desc}
+              {channels.status && (
+                <span className="ml-2 inline-block rounded-full border border-ink/40 px-2 py-0.5 align-middle font-mono text-[10px] uppercase tracking-wider text-ink/70">
+                  {channels.status}
+                </span>
+              )}
             </p>
             <a
               href={current.page || `${channels.url}#${current.id}`}
@@ -163,7 +176,7 @@ function WatchLiveCard({ channel }) {
         </span>
       </span>
       <span className="absolute right-4 top-4 rounded border border-cream/40 bg-ink/70 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cream">
-        Live stream opens in a new tab
+        {channels.status ? `${channels.status} · ` : ''}Live stream opens in a new tab
       </span>
     </a>
   )
