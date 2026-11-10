@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 // One HLS player for the active channel. hls.js is loaded on demand (dynamic
 // import) the first time a channel that is on air is shown, so the homepage
-// bundle stays small. Safari plays HLS natively and skips the library.
+// bundle stays small.
 export default function LivePlayer({ channel, health }) {
   const videoRef = useRef(null)
   const [muted, setMuted] = useState(true)
@@ -19,25 +19,31 @@ export default function LivePlayer({ channel, health }) {
     video.muted = true
     setMuted(true)
 
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = channel.stream
-      video.play().catch(() => {})
-    } else {
-      import('hls.js').then(({ default: Hls }) => {
-        if (cancelled) return
-        if (!Hls.isSupported()) {
-          setError('This browser cannot play live streams.')
-          return
-        }
+    // hls.js first, native HLS only as the fallback (iPhone Safari has no Media
+    // Source Extensions). Chrome now answers canPlayType for HLS too, but its
+    // native player stalls on streams made of short blocks joined by
+    // discontinuities, which is how Puddle Park airs.
+    import('hls.js').then(({ default: Hls }) => {
+      if (cancelled) return
+      if (Hls.isSupported()) {
         hls = new Hls({ lowLatencyMode: false, enableWorker: true })
+        let recovered = 0
         hls.on(Hls.Events.ERROR, (_e, data) => {
-          if (data.fatal) setError('The stream dropped. Reload to try again.')
+          if (!data.fatal) return
+          if (data.type === Hls.ErrorTypes.NETWORK_ERROR && recovered++ < 3) hls.startLoad()
+          else if (data.type === Hls.ErrorTypes.MEDIA_ERROR && recovered++ < 3) hls.recoverMediaError()
+          else setError('The stream dropped. Reload to try again.')
         })
         hls.loadSource(channel.stream)
         hls.attachMedia(video)
         hls.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}))
-      })
-    }
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = channel.stream
+        video.play().catch(() => {})
+      } else {
+        setError('This browser cannot play live streams.')
+      }
+    })
     return () => {
       cancelled = true
       if (hls) hls.destroy()

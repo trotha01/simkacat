@@ -1,6 +1,6 @@
-# Simka Cat
+# Simka Entertainment
 
-Studio site for Simka Cat Productions (Trevor Rothaus and Mychal Simka), built with React, Vite, and Tailwind CSS.
+Studio site for Simka Entertainment (Mychal Simka and Trevor Rothaus), built with React, Vite, and Tailwind CSS.
 
 All copy lives in `src/data/content.js`. Real showcase clips go in `public/showcase/` and are referenced from the `showcase` list.
 
