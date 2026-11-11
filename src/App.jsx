@@ -10,14 +10,14 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="bg-cream font-nunito text-ink">
+    <div id="top" className="bg-cream font-nunito text-ink">
       <Nav />
       <main>
+        <Channels />
         <Hero />
         <Credits />
         <Services />
         <Showcase />
-        <Channels />
         <DeepInfer />
         <WhoWeAre />
       </main>

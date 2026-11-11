@@ -161,7 +161,7 @@ export default function LivePlayer({ channel, health }) {
           onClick={watch}
           data-watch
           className="group absolute inset-0 flex flex-col items-center justify-center gap-4 bg-ink text-cream"
-          aria-label={`Watch ${channel.name} live, with sound`}
+          aria-label={`Watch ${channel.name} live`}
         >
           {channel.still && (
             <img src={channel.still} alt="" className="absolute inset-0 h-full w-full object-cover opacity-60 group-hover:opacity-75" />
@@ -172,7 +172,7 @@ export default function LivePlayer({ channel, health }) {
             </svg>
           </span>
           <span className="relative rounded-full border-2 border-ink bg-slime px-4 py-2 font-luckiest text-sm uppercase tracking-wide text-ink shadow-[4px_4px_0_#1c1c1c]">
-            Watch live with sound
+            Watch live
           </span>
         </button>
       )}
