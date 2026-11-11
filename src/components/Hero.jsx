@@ -3,7 +3,7 @@ import { siteMeta } from '../data/content'
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-white px-5 pb-16 pt-12 sm:px-8 md:pb-24 md:pt-20">
+    <section id="hero" className="relative overflow-hidden bg-white px-5 pb-16 pt-12 sm:px-8 md:pb-24 md:pt-20">
       <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-slime/50 blur-3xl md:h-96 md:w-96" />
       <div className="pointer-events-none absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-pink/40 blur-3xl" />
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">

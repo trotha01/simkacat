@@ -25,10 +25,10 @@ export const siteMeta = {
 }
 
 export const nav = [
+  { href: '#channels', label: 'Channels' },
   { href: '#credits', label: 'Credits' },
   { href: '#services', label: 'Services' },
   { href: '#showcase', label: 'Showcase' },
-  { href: '#channels', label: 'Channels' },
   { href: '#deepinfer', label: 'DeepInfer' },
   { href: '#who', label: 'About us' },
 ]
