@@ -7,6 +7,8 @@
   "compatibility_date": "2026-11-01",
   "workers_dev": true,
   "preview_urls": true,
+  // Needed by `wrangler preview` (branch and pull request previews); empty is fine.
+  "previews": {},
   "assets": {
     "directory": "./dist",
     // Same as Netlify without a 404.html: unknown paths answer 404, no SPA fallback.
