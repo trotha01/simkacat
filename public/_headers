@@ -1,0 +1,11 @@
+# Same HSTS header Netlify sent.
+/*
+  Strict-Transport-Security: max-age=31536000
+
+# Netlify declared UTF-8 on text responses; keep that.
+/
+  Content-Type: text/html; charset=utf-8
+/assets/*.js
+  Content-Type: text/javascript; charset=utf-8
+/assets/*.css
+  Content-Type: text/css; charset=utf-8
