@@ -29,3 +29,11 @@ npm run lint
 - `src/data/content.js` — all copy, credits (with sources), services, showcase tiles, channel list
 - `src/assets` — images
 - `src/fonts` — self-hosted webfonts (Caveat, Fredoka, Gochi Hand, Luckiest Guy, Nunito)
+
+## Hosting
+
+The site is served by the Cloudflare Worker `simkacat` (static assets only, see `wrangler.jsonc`).
+Cloudflare Workers Builds is connected to this repository: a push to `main` runs `npm run build`
+and `npx wrangler deploy`; a push to any other branch builds a preview and Cloudflare comments
+the preview URL on the pull request. Response headers live in `public/_headers`.
+No secrets or API tokens are needed in this repository.

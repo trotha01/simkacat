@@ -1,0 +1,15 @@
+// simka.cat on Cloudflare Workers static assets.
+// Deployed by Cloudflare Workers Builds (git-connected): main -> production,
+// other branches -> preview versions. No Worker script: assets only.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "simkacat",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./dist",
+    // Same as Netlify without a 404.html: unknown paths answer 404, no SPA fallback.
+    "not_found_handling": "none"
+  }
+}
